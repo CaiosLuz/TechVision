@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+    Copyright (c) 2022 BestSolution.at and others.
+     
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v.2.0 which is available at
+    https://www.eclipse.org/legal/epl-2.0.
+     
+    SPDX-License-Identifier: EPL-2.0
+     
+    Contributors:
+        BestSolution.at - initial API and implementation
+ -->
+
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            category="org.eclipse.fx.ide/org.eclipse.fx.ide.samples"
+            class="org.eclipse.fx.ide.pde.ui.e4.project.media.NewMediaProjectWizard"
+            icon="platform:/plugin/org.eclipse.pde.ui/icons/etool16/newpprj_wiz.png"
+            id="org.eclipse.fx.ide.pde.e4.media.app"
+            name="e4 Media Application"
+            project="true">
+      </wizard>
+      <category
+            id="org.eclipse.fx.ide.samples"
+            name="Samples"
+            parentCategory="org.eclipse.fx.ide">
+      </category>
+      <wizard
+            category="org.eclipse.fx.ide/org.eclipse.fx.ide.pde.ui.osgi"
+            class="org.eclipse.fx.ide.pde.ui.e4.project.boot.NewProjectStructureWizard"
+            icon="platform:/plugin/org.eclipse.pde.ui/icons/etool16/newpprj_wiz.png"
+            id="org.eclipse.fx.ide.pde.ui.e4.maven.app"
+            name="e4 Application projects"
+            project="true">
+      </wizard>
+   </extension>
+
+</plugin>

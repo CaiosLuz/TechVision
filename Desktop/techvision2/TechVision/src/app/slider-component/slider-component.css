@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Irish+Grover&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.carousel-full {
+  width: 100%;
+}
+
+.carousel-full .picsum-img-wrapper img {
+  width: 100%;
+  height: auto; /* Mantém proporção */
+  object-fit: cover; /* Preenche todo o espaço */
+}
+
+.carousel-caption {
+    color: #191C1F;
+    font-family: "Public Sans", system-ui;
+}

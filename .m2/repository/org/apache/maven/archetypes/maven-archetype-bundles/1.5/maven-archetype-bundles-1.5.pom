@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.apache.maven</groupId>
+    <artifactId>maven-parent</artifactId>
+    <version>43</version>
+    <relativePath />
+  </parent>
+
+  <groupId>org.apache.maven.archetypes</groupId>
+  <artifactId>maven-archetype-bundles</artifactId>
+  <version>1.5</version>
+  <packaging>pom</packaging>
+
+  <name>Apache Maven Archetypes</name>
+  <description>Archetypes provided by Maven.</description>
+  <url>https://maven.apache.org/archetypes/</url>
+
+  <modules>
+    <module>maven-archetype-archetype</module>
+    <module>maven-archetype-j2ee-simple</module>
+    <module>maven-archetype-plugin</module>
+    <module>maven-archetype-plugin-site</module>
+    <module>maven-archetype-portlet</module>
+    <!--module>maven-archetype-profiles</module-->
+    <module>maven-archetype-quickstart</module>
+    <module>maven-archetype-simple</module>
+    <module>maven-archetype-site</module>
+    <module>maven-archetype-site-simple</module>
+    <module>maven-archetype-site-skin</module>
+    <module>maven-archetype-webapp</module>
+  </modules>
+
+  <scm>
+    <connection>scm:git:https://gitbox.apache.org/repos/asf/maven-archetypes.git</connection>
+    <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/maven-archetypes.git</developerConnection>
+    <tag>maven-archetype-bundles-1.5</tag>
+    <url>https://github.com/apache/maven-archetypes/tree/${project.scm.tag}</url>
+  </scm>
+  <issueManagement>
+    <system>jira</system>
+    <url>https://issues.apache.org/jira/browse/MARCHETYPES</url>
+  </issueManagement>
+  <ciManagement>
+    <system>Jenkins</system>
+    <url>https://ci-builds.apache.org/job/Maven/job/maven-box/job/maven-archetypes/</url>
+  </ciManagement>
+  <distributionManagement>
+    <site>
+      <id>apache.website</id>
+      <url>scm:svn:https://svn.apache.org/repos/asf/maven/website/components/${maven.site.path}</url>
+    </site>
+  </distributionManagement>
+
+  <properties>
+    <!-- additional plugins versions - not presents in parent -->
+    <version.maven-ejb-plugin>3.2.1</version.maven-ejb-plugin>
+    <version.maven-archetype-plugin>3.2.0</version.maven-archetype-plugin>
+
+    <maven.site.path>archetypes-archives/archetypes-LATEST</maven.site.path>
+    <rat.skip>true</rat.skip>
+    <project.build.outputTimestamp>2024-08-20T21:38:05Z</project.build.outputTimestamp>
+  </properties>
+
+  <repositories>
+    <repository>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <!-- useful to resolve maven-archetype-plugin when it is a SNAPSHOT -->
+      <id>apache.snapshots</id>
+      <name>Apache Snapshot Repository</name>
+      <url>https://repository.apache.org/snapshots</url>
+    </repository>
+  </repositories>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+      <resource>
+        <filtering>true</filtering>
+        <directory>src/main/resources-filtered</directory>
+      </resource>
+    </resources>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>${version.maven-archetype-plugin}</version>
+          <configuration>
+            <ignoreEOLStyle>true</ignoreEOLStyle>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.codehaus.groovy</groupId>
+              <artifactId>groovy-xml</artifactId>
+              <version>2.4.16</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <configuration>
+            <escapeString>\</escapeString>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>${version.maven-archetype-plugin}</version>
+      </extension>
+    </extensions>
+  </build>
+</project>

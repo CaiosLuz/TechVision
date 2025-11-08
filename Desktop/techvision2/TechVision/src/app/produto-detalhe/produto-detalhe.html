@@ -1,0 +1,113 @@
+<app-menu-superior></app-menu-superior>
+
+<div class="container-fluid" *ngIf="produto">
+  <div class="row justify-content-center align-items-center">
+
+    <div class="card col-5 mt-5">
+      <div class="produto-container mb-3">
+        <!-- Imagem principal do produto -->
+        <img [src]="imagemPrincipal" alt="Produto" class="img-fluid produto-principal">
+
+        <!-- Coração sobreposto -->
+        <img src="images/produto/coracao.png" alt="coração" class="coracao-overlay">
+      </div>
+
+      <div class="d-flex gap-2 justify-content-center">
+        <img *ngFor="let img of imagens"
+            [src]="img"
+            class="img-thumbnail"
+            (click)="imagemPrincipal = img"
+            style="width: 80px; cursor: pointer;">
+      </div>
+
+      <div class="row">
+        <p><strong>Detalhes do produto:</strong></p>
+        <p>{{ produto.descricao }}</p>
+      </div>
+    </div>
+
+    <div class="col-5 info-produto">
+      <div class="row justify-content-start">
+
+        <div class="row avaliacao">
+          <div class="col">
+            ⭐⭐⭐⭐⭐ ({{ produto.avaliacao || '0' }} avaliações)
+          </div>
+        </div>
+
+        <div class="row nome-modelo">
+          <div class="col">
+            {{ produto.nome }}
+          </div>
+        </div>
+
+        <div class="row comprimento-haste">
+          <div class="col-6">
+            Comprimento da Haste: {{ produto.haste || 0 }}
+          </div>
+          <div class="col-6">
+            Formato: {{ produto.formato || '' }}
+          </div>
+        </div>
+
+        <div class="row tamanho-ponte">
+          <div class="col">
+            Tamanho da Ponte: {{ produto.ponte || 0 }}
+          </div>
+          <div class="col">
+            Gênero: {{ produto.genero || 'Unisex' }}
+          </div>
+        </div>
+
+        <div class="row largura-lente">
+          <div class="col">
+            Largura da Lente: {{ produto.largura_lente || 0 }}
+          </div>
+        </div>
+
+        <div class="row preco-prazo">
+          <div class="col">
+            R${{ produto.preco || '' }} Em até {{ produto.parcelas || '1' }}x de R${{ produto.valor_parcela || '0' }} s/juros
+          </div>
+        </div>
+
+        <div class="row preco-a-vista">
+          <div class="col">
+            R${{ produto.preco_pix || '0' }} Por pagamento via Pix
+          </div>
+        </div>
+
+        <div class="row nome-modelo">
+          <div class="col">
+            <div class="row">
+              <p>Cores</p>
+            </div>
+            <div class="row">
+                {{ produto?.cores?.join(' ') || 'Sem cores' }}
+            </div>
+          </div>
+        </div>
+
+        <div class="row nome-modelo">
+          <div class="col-3">
+            - 1 + 
+          </div>
+          <div class="col-9">
+            ADICIONAR AO CARRINHO
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col troca-devolucao justify-content-center">
+            7 DIAS PARA TROCA OU DEVOLUÇÃO 
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!produto">
+  <p>Carregando produto...</p>
+</div>

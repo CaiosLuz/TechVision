@@ -1,0 +1,227 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.fx.ide.css.ui;singleton:=true
+Built-By: jenkins
+Require-Bundle: org.eclipse.fx.ide.css;bundle-version="2.3.0";visibility
+ :=reexport,org.eclipse.xtext.ui,org.eclipse.ui.editors;bundle-version="
+ 3.6.0",org.eclipse.ui.ide;bundle-version="3.6.0",org.eclipse.xtext.ui.s
+ hared,org.eclipse.ui,org.eclipse.xtext.builder,org.antlr.runtime,org.ec
+ lipse.xtext.common.types.ui,org.eclipse.xtext.ui.codetemplates.ui,org.e
+ clipse.compare,org.eclipse.fx.core;bundle-version="2.3.0",org.eclipse.f
+ x.core.guice;bundle-version="2.3.0",org.eclipse.fx.ide.ui;bundle-versio
+ n="2.3.0",org.eclipse.jdt.annotation;bundle-version="2.0.100";resolutio
+ n:=optional
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/efxclips
+ e/org.eclipse.efxclipse.git;path="bundles/tooling/org.eclipse.fx.ide.cs
+ s.ui";commitId=8d6dac22898c80493233b274ffbb889638bee2d4
+Bundle-Vendor: %Bundle-Vendor
+Import-Package: org.apache.commons.logging,org.apache.log4j,org.eclipse.
+ fx.osgi.util
+Export-Package: org.eclipse.fx.ide.css.ui;x-internal:=true,org.eclipse.f
+ x.ide.css.ui.contentassist;x-internal:=true,org.eclipse.fx.ide.css.ui.c
+ ontentassist.antlr;x-internal:=true,org.eclipse.fx.ide.css.ui.extapi;x-
+ internal:=true,org.eclipse.fx.ide.css.ui.hover;x-internal:=true,org.ecl
+ ipse.fx.ide.css.ui.internal;x-internal:=true,org.eclipse.fx.ide.css.ui.
+ quickfix
+Bundle-Name: %Bundle-Name
+Bundle-Version: 3.10.0.202303150700
+Bundle-Activator: org.eclipse.fx.ide.css.ui.internal.CssDslActivator
+Created-By: Apache Maven 3.5.4
+Build-Jdk: 1.8.0_202
+Eclipse-BundleShape: dir
+
+Name: plugin.xml
+SHA-256-Digest: lMWTG+m25aRVsvv2DzMU/uLL3k7zWCKaqbhl3LIG1fA=
+
+Name: org/eclipse/fx/ide/css/ui/hover/ExtApiDelegatingDocumentationProvi
+ der.class
+SHA-256-Digest: F0yzx5c6j5Z7y2Ln2bNBCvOuI/EKFxBR59STTQTr1uA=
+
+Name: org/eclipse/fx/ide/css/ui/occurrences/CssDslOccurenceComputer$1.cl
+ ass
+SHA-256-Digest: FHOMCW9mSfHVqCorXf3fEhTw3qwS0TKvoHKm489FFD0=
+
+Name: icons/package_16x16.png
+SHA-256-Digest: 0UWvVz8kj9IVqyiMgE9APxBRDt4QzUXnx69D4J1WIVs=
+
+Name: icons/page_white_swoosh.png
+SHA-256-Digest: +qEemeWR/nkXBxVdXJAdhUckOXEGUujdWR4JaRj6XGM=
+
+Name: CssDocsStyleSheet.css
+SHA-256-Digest: mRVzDWWjZax8BBp8EmVBYP4k3dk2FVBaDnVhFJm9zBc=
+
+Name: org/eclipse/fx/ide/css/ui/internal/FXCSSContentDescriber.class
+SHA-256-Digest: s9R2FZaJZLfZ41z2xxWoXMytVywmMKxMo1aZaIhphoA=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/antlr/internal/InternalCss
+ Dsl.g
+SHA-256-Digest: bYV5nYBpNuT0zO8TuJM0u0r4NJct1g6pSumWy+XZiGk=
+
+Name: org/eclipse/fx/ide/css/ui/internal/CssDslActivator.class
+SHA-256-Digest: ebjcFu8ZXGu80iUyQKPzDqU1kd4glc9+X4v9Qa9TOy8=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/antlr/internal/InternalCss
+ Dsl.tokens
+SHA-256-Digest: sZ1jONpA5hg1mrtc+mZQFV6B64G0UZvsJsY0so3Q+H8=
+
+Name: org/eclipse/fx/ide/css/ui/labeling/CssDslLabelProvider.class
+SHA-256-Digest: ++Cf06FR0tLVOq7AvNrOvmxQj1sasqrkJD5wTr7wHIY=
+
+Name: org/eclipse/fx/ide/css/ui/outline/CssDslOutlineTreeProvider.class
+SHA-256-Digest: 07wY9phGSQGEMGknHVneYSlz3iqOlyvQc8GHjd/0mwo=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/antlr/internal/InternalCss
+ DslParser$DFA83.class
+SHA-256-Digest: eRInyYm4rpsc1avqu2KgtPYDISbGcuDE555uQtRR49A=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/CssDslProposalProvider$3.c
+ lass
+SHA-256-Digest: WSbYMl/W1RJpm3JpVnz4PS/3R1yXyAOCtd8pQKaaYNo=
+
+Name: org/eclipse/fx/ide/css/ui/doubleclicking/CssGrammarAwareStrategy.c
+ lass
+SHA-256-Digest: Q4ZI3KPlY4cRpBEF3eNF/0FJ2HE1qFLziAa3Br2T5vE=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/antlr/internal/InternalCss
+ DslParser$DFA58.class
+SHA-256-Digest: Esux3UsA9JpHk9fULhPZMLn8HlZPAD3PYCQp3LKbH6s=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/TemplateProposalProvider.c
+ lass
+SHA-256-Digest: WFjmIVt9lI37TFJRqCXcG4MeiHSWkRQgRq+iErT9bfo=
+
+Name: icons/property_16x16.png
+SHA-256-Digest: 2x5/Tv/13nQuR5JeMeVsX275tz3HC6sqqJxp7kkU0qY=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/CssDslProposalProvider$Fon
+ tPropertyProposal.class
+SHA-256-Digest: RRZ97D8DHoojk1lDxP1vnuuuHYxiOAFlOU3aakJB7aA=
+
+Name: org/eclipse/fx/ide/css/ui/highlighting/TokenMapper.class
+SHA-256-Digest: lCKXef0Sle6HMHzqzS3aBP6DvnWuoPeC+wcjD8gM8eg=
+
+Name: org/eclipse/fx/ide/css/ui/CssDslUiModule.class
+SHA-256-Digest: Fi8LFeFeJFKqtEoi6golcGzpGrKmSCwB7rwgfyQFF74=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/CssDslProposalProvider.cla
+ ss
+SHA-256-Digest: ZLWAWkYWsFt7xLsQGUPQ2mxNsC6RKE13BY066ooTURA=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/CssDslProposalProvider$2.c
+ lass
+SHA-256-Digest: DgoXD9rzdzcFBxtYhweic0S98M3DT3xkt9YANGLC030=
+
+Name: icons/rule_16x16.png
+SHA-256-Digest: UNpDmluuC5cVLuLkpzHXYSzhZsCBOuz9GU6uIJayefI=
+
+Name: org/eclipse/fx/ide/css/ui/occurrences/CssDslOccurenceComputer.clas
+ s
+SHA-256-Digest: /TpY7Tq6B5rZAzN6/cyPYvtrna7cqPwomdnWaJwNeB8=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/antlr/internal/InternalCss
+ DslParser$DFA64.class
+SHA-256-Digest: hisS26kiGEJAvj7zHGYX/4D49Uit1t5FA695HhbolNY=
+
+Name: org/eclipse/fx/ide/css/ui/hover/CssHoverProvider.class
+SHA-256-Digest: Jb5qYf0+xO0bYQFXw8N+B41q74xuUAzM4JMy5AZJ3Z8=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: nQHWsDbVljWK8214wxaGDgkR2RSgx91MVD1ua3NGHrs=
+
+Name: org/eclipse/fx/ide/css/ui/AbstractCssDslUiModule.class
+SHA-256-Digest: vPKvC7zFjc6R7/IUFq64rRosV4ECEKGekN4hsQMHnt0=
+
+Name: org/eclipse/fx/ide/css/ui/highlighting/CssDslHighlightingConfigura
+ tion.class
+SHA-256-Digest: oSj6ugFqldlMuSmzlUsWSRIvz7hJ+xcL8p6Bed/ksAE=
+
+Name: org/eclipse/fx/ide/css/ui/doubleclicking/CssGrammarAwareStrategy$1
+ .class
+SHA-256-Digest: Y3GvkhWCb775lnav3mfEAEfquEgsiTC4LMXwYdV/UaU=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/antlr/internal/InternalCss
+ DslParser.class
+SHA-256-Digest: /YihR6hS8fq3tuX/p/8jPh2hS2QLVrhIDLn2YBqMcNc=
+
+Name: org/eclipse/fx/ide/css/ui/extapi/UIProposal.class
+SHA-256-Digest: nd4n8sx0cH+5w8ppJGzhrISTui/Kv7XNo9gjY6hiU6E=
+
+Name: org/eclipse/fx/ide/css/ui/CSSEditorScope.class
+SHA-256-Digest: 7Z9YRmVhY/ZdtZ9nUY5ogouxVbDJqCr5cYYfk4gASME=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/antlr/internal/InternalCss
+ DslParser$DFA22.class
+SHA-256-Digest: 0AWije1ik+LKDCDWf/IqnweLpYMyYED6E9PcHwCKtj0=
+
+Name: org/eclipse/fx/ide/css/ui/CssDslExecutableExtensionFactory.class
+SHA-256-Digest: OxyC+NhNXV9ZxMnGDUCuNBqGpdErydGHrjWK04tKcKc=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/CssDslProposalProvider$1.c
+ lass
+SHA-256-Digest: oYhmQVr2jDpmz7yYLoK47Dh9INCplIXwEr+bCphUbVY=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/antlr/CssDslParser$1.class
+SHA-256-Digest: Iw2B30s8BryFatoZG2/SDrXm0stM7tu/hcWp2mYFNaA=
+
+Name: org/eclipse/fx/ide/css/ui/commands/RemoveCssEditorNature.class
+SHA-256-Digest: xpZfPGMcUERn2fNIAMk2JkTzvIpma6xCQpmr0r1r5CM=
+
+Name: org/eclipse/fx/ide/css/ui/internal/PreviewAdapterFactory.class
+SHA-256-Digest: +BmWOSH7lxdf2Yyo1nP5lEk2jmZgP3PYw6kZwjtRdA4=
+
+Name: icons/selector_16x16.png
+SHA-256-Digest: lzbWaQftgCLWs5iQcoOM1Q8gpbZkZBUltrAm6zZDnl4=
+
+Name: org/eclipse/fx/ide/css/ui/editor/WTPCompatibleDocumentProvider.cla
+ ss
+SHA-256-Digest: A0fFVJ6Lx+65Z3OTHYQMf5RGz1U4aQ0EsBlWKE66BHU=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/antlr/internal/InternalCss
+ DslParser$DFA13.class
+SHA-256-Digest: BQoepjQjqgloSH+M+RtlA1mL8xt64oOrRtW/q1PWxk0=
+
+Name: org/eclipse/fx/ide/css/ui/labeling/CssDslDescriptionLabelProvider.
+ class
+SHA-256-Digest: gqfObK/fbbHeVYhBbWLqtqfFeRxb1a4f/ER9Swvcnl8=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/antlr/CssDslParser.class
+SHA-256-Digest: LRmvxIKRSdACJSRi6LFPFV5JRPLfBCVZnL72WtGY6ys=
+
+Name: about.html
+SHA-256-Digest: kqkRPmLg6PeOeHflWMe4idUd564Rc2q4jzKdO3dN1ho=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/antlr/internal/InternalCss
+ DslLexer$DFA6.class
+SHA-256-Digest: hmHUhJXUWthzSisXD8NBBDeawvyQ2EkyejSXqxryHiM=
+
+Name: org/eclipse/fx/ide/css/ui/quickfix/CssDslQuickfixProvider.class
+SHA-256-Digest: gks4v1B+RFq+5aOFW1VMKGPejI27OYBDPGOjCwNn2co=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/AbstractCssDslProposalProv
+ ider.class
+SHA-256-Digest: 2GBt4k+N9LGCfiCceeo3sKxPXutqWeQJXlDO2x1nt44=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/antlr/PartialCssDslContent
+ AssistParser.class
+SHA-256-Digest: YJ5F6rf+oZpcu+lDY4/CMecajvsZZCQHwDGZp/lQJS4=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/antlr/internal/InternalCss
+ DslLexer.class
+SHA-256-Digest: ywrqT7Hz/1GKW6xUt0Y/m2JR/jxDRUe+6DgpM+EkZ/A=
+
+Name: org/eclipse/fx/ide/css/ui/commands/AddCssEditorNature.class
+SHA-256-Digest: uzItwO4ACWv8l3pESJkoMg0bICv7JRHlO0qsa6uxaPA=
+
+Name: org/eclipse/fx/ide/css/ui/contentassist/antlr/internal/InternalCss
+ DslParser$DFA17.class
+SHA-256-Digest: YWk7AIxVhD/p1wS1qjPNnPdJo5cRIyKyHpUr0RG/zfE=
+
+Name: org/eclipse/fx/ide/css/ui/internal/PreviewAdapterFactory$1.class
+SHA-256-Digest: bKWBmeKLDr6zeBKzHMg6TOxJwlseye+nAK9cWAM+vGk=
+
+Name: org/eclipse/fx/ide/css/ui/highlighting/CssDslHighlightingCalculato
+ r.class
+SHA-256-Digest: EzObt639IWvOqlHyTSTNuPZNGdW4BNXYW0yUePmUpkI=
+

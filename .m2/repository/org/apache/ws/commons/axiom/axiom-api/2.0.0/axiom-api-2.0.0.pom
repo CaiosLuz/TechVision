@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.apache.ws.commons.axiom</groupId>
+    <artifactId>axiom</artifactId>
+    <version>2.0.0</version>
+  </parent>
+  <artifactId>axiom-api</artifactId>
+  <packaging>bundle</packaging>
+  <name>Axiom API</name>
+  <description>The Axiom API</description>
+  <url>http://ws.apache.org/axiom/</url>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>jakarta-bom</artifactId>
+        <version>${project.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>jaxen</groupId>
+      <artifactId>jaxen</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.james</groupId>
+      <artifactId>apache-mime4j-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.framework</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.util.tracker</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.woodstox</groupId>
+      <artifactId>woodstox-core</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>testutils</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>xml-testsuite</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>soap-testsuite</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>jaxp-testsuite</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.woodstox</groupId>
+      <artifactId>stax2-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.angus</groupId>
+      <artifactId>angus-mail</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>xml-utils</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.auto.service</groupId>
+      <artifactId>auto-service-annotations</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>blob-testutils</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>buildutils-maven-plugin</artifactId>
+        <version>${project.version}</version>
+        <executions>
+          <execution>
+            <id>post-process-sources-jar</id>
+            <goals>
+              <goal>post-process-sources-jar</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>create-dependency-reduced-pom</id>
+            <goals>
+              <goal>create-dependency-reduced-pom</goal>
+            </goals>
+            <configuration>
+              <excludedArtifacts>
+                <excludedArtifact>base64-utils</excludedArtifact>
+                <excludedArtifact>blob</excludedArtifact>
+              </excludedArtifacts>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <includes>
+            <include>**/*Test.java</include>
+            <include>org/apache/axiom/util/stax/dialect/DialectTestSuite.java</include>
+          </includes>
+          <excludes>
+            <exclude>org/apache/axiom/util/stax/dialect/*Test.java</exclude>
+          </excludes>
+          <argLine>${argLine} -Xms64m -Xmx64m</argLine>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Private-Package />
+            <Export-Package>org.apache.axiom.*;-split-package:=merge-first;-noimport:=true</Export-Package>
+            <Import-Package>org.jaxen.*;resolution:=optional,
+                            org.codehaus.stax2;resolution:=optional,
+                            org.apache.james.mime4j.*;version="${range;[==,=+)}",
+                            *</Import-Package>
+            <Bundle-Activator>org.apache.axiom.locator.Activator</Bundle-Activator>
+            <Bundle-ActivationPolicy>lazy</Bundle-ActivationPolicy>
+          </instructions>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.github.veithen.phos</groupId>
+        <artifactId>enforcer-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <layers>
+                <layer>
+                  <packages>
+                    <value>org.apache.james.mime4j</value>
+                  </packages>
+                  <visibilityRules>
+                    <value>
+                      <packages>
+                        <value>org.apache.axiom.mime</value>
+                      </packages>
+                      <allowPublicUsage>false</allowPublicUsage>
+                    </value>
+                  </visibilityRules>
+                </layer>
+                <layer>
+                  <packages>
+                    <value>org.apache.axiom.util</value>
+                  </packages>
+                  <visibilityRules>
+                    <value>
+                      <allowPublicUsage>false</allowPublicUsage>
+                    </value>
+                  </visibilityRules>
+                </layer>
+                <layer>
+                  <packages>
+                    <value>org.apache.commons.logging</value>
+                  </packages>
+                  <visibilityRules>
+                    <value>
+                      <allowPublicUsage>false</allowPublicUsage>
+                    </value>
+                  </visibilityRules>
+                </layer>
+              </layers>
+              <ignore>org.apache.axiom.om.OMAbstractFactory -> org.apache.axiom.soap.SOAPFactory,
+                                org.apache.axiom.om.OMMetaFactory -> org.apache.axiom.soap.SOAPFactory,
+                                org.apache.axiom.om.OMMetaFactorySPI -> org.apache.axiom.soap.SOAPModelBuilder,
+                                org.apache.axiom.om.OMXMLBuilderFactory -> org.apache.axiom.soap.SOAPFactory,
+                                org.apache.axiom.om.OMXMLBuilderFactory -> org.apache.axiom.soap.SOAPMessage,
+                                org.apache.axiom.om.OMXMLBuilderFactory -> org.apache.axiom.soap.SOAPModelBuilder,
+                                org.apache.axiom.om.OMXMLBuilderFactory -> org.apache.axiom.soap.SOAPProcessingException,
+                                org.apache.axiom.om.OMXMLBuilderFactory -> org.apache.axiom.soap.SOAPVersion,
+                                org.apache.axiom.om.OMOutputFormat -> org.apache.axiom.soap.SOAPVersion,
+                                
+                                org.apache.axiom.om.OMMetaFactorySPI -> org.apache.axiom.om.util.StAXParserConfiguration,
+                                org.apache.axiom.om.OMXMLBuilderFactory -> org.apache.axiom.om.util.StAXParserConfiguration,
+                                org.apache.axiom.om.OMOutputFormat -> org.apache.axiom.om.util.StAXWriterConfiguration,
+                                
+                                org.apache.axiom.om.ds.AbstractPushOMDataSource -> org.apache.axiom.om.util.StAXUtils,
+                                org.apache.axiom.om.ds.BlobOMDataSource -> org.apache.axiom.om.util.StAXUtils,
+                                org.apache.axiom.om.ds.StringOMDataSource -> org.apache.axiom.om.util.StAXUtils,
+                                
+                                org.apache.axiom.om.util.StAXParserConfiguration -> org.apache.axiom.util.stax.dialect.StAXDialect</ignore>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

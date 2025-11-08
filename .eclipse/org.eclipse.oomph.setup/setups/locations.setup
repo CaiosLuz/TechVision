@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:LocationCatalog
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0">
+  <installation>
+    <key href="file:/C:/Users/caio7/eclipse/java-2024-12/eclipse/configuration/org.eclipse.oomph.setup/installation.setup#/"/>
+    <value href="file:/C:/Users/caio7/Documents/projetos-codigos/click-manager/cjfotos/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+    <value href="file:/C:/Users/caio7/Documents/projetos-codigos/click-manager3/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+    <value href="file:/C:/Users/caio7/Documents/Facens/3°%20Semestre/Estrutura%20de%20dados/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+    <value href="file:/C:/Users/caio7/Documents/Facens/3°%20Semestre/Estrutura%20de%20dados/atividade-estrutura-dados-main/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+    <value href="file:/C:/Users/caio7/Documents/Facens/3°%20Semestre/Estrutura%20de%20dados/gerenciadorTarefas/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+    <value href="file:/C:/Users/caio7/Documents/intuitivecare/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+    <value href="file:/C:/Users/caio7/Documents/projetos-codigos/click-manager/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+  </installation>
+  <workspace>
+    <key href="file:/C:/Users/caio7/Documents/projetos-codigos/click-manager/cjfotos/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+    <value href="file:/C:/Users/caio7/eclipse/java-2024-12/eclipse/configuration/org.eclipse.oomph.setup/installation.setup#/"/>
+  </workspace>
+  <workspace>
+    <key href="file:/C:/Users/caio7/Documents/projetos-codigos/click-manager3/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+    <value href="file:/C:/Users/caio7/eclipse/java-2024-12/eclipse/configuration/org.eclipse.oomph.setup/installation.setup#/"/>
+  </workspace>
+  <workspace>
+    <key href="file:/C:/Users/caio7/Documents/Facens/3°%20Semestre/Estrutura%20de%20dados/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+    <value href="file:/C:/Users/caio7/eclipse/java-2024-12/eclipse/configuration/org.eclipse.oomph.setup/installation.setup#/"/>
+  </workspace>
+  <workspace>
+    <key href="file:/C:/Users/caio7/Documents/Facens/3°%20Semestre/Estrutura%20de%20dados/atividade-estrutura-dados-main/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+    <value href="file:/C:/Users/caio7/eclipse/java-2024-12/eclipse/configuration/org.eclipse.oomph.setup/installation.setup#/"/>
+  </workspace>
+  <workspace>
+    <key href="file:/C:/Users/caio7/Documents/Facens/3°%20Semestre/Estrutura%20de%20dados/gerenciadorTarefas/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+    <value href="file:/C:/Users/caio7/eclipse/java-2024-12/eclipse/configuration/org.eclipse.oomph.setup/installation.setup#/"/>
+  </workspace>
+  <workspace>
+    <key href="file:/C:/Users/caio7/Documents/intuitivecare/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+    <value href="file:/C:/Users/caio7/eclipse/java-2024-12/eclipse/configuration/org.eclipse.oomph.setup/installation.setup#/"/>
+  </workspace>
+  <workspace>
+    <key href="file:/C:/Users/caio7/Documents/projetos-codigos/click-manager/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+    <value href="file:/C:/Users/caio7/eclipse/java-2024-12/eclipse/configuration/org.eclipse.oomph.setup/installation.setup#/"/>
+  </workspace>
+  <workspace>
+    <key href="file:/C:/Users/caio7/eclipse-workspace/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+  </workspace>
+</setup:LocationCatalog>

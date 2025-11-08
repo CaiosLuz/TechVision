@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Built-By: jenkins
+Created-By: Apache Maven 3.5.4
+Build-Jdk: 1.8.0_202
+
+Name: feature.xml
+SHA-256-Digest: z+s71+Puj159aJf6VYiUgztj+1wYj1VTLDfhzhXXf7o=
+

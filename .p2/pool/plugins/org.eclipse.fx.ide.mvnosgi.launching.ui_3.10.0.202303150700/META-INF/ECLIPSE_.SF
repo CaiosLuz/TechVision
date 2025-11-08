@@ -1,0 +1,19 @@
+Signature-Version: 1.0
+Created-By: 11.0.18 (Eclipse Adoptium)
+SHA-256-Digest-Manifest: NNoN25gJrEQvFERb08xKTWYnN+mY5eKut325O/CnQVo=
+SHA-256-Digest-Manifest-Main-Attributes: zHvNzNWjlkP0xLVtafzTthU0zEs1JOO
+ wkJbs+Xgrx7A=
+
+Name: org/eclipse/fx/ide/mvnosgi/launching/ui/MainLauncherTab.class
+SHA-256-Digest: xeuRsG5FUouARVGhWSH9la8QOef2RB//QV6GiwMUXD0=
+
+Name: plugin.xml
+SHA-256-Digest: UuFu4UgPCO6htFjrxBENOh/sDcwhCg7GpycEUhqLzik=
+
+Name: icons/osgiconsole.png
+SHA-256-Digest: j5B3FL4cSJ9cFaDvrDE0Gox1QesdNp+yWDTk2vuy1m8=
+
+Name: org/eclipse/fx/ide/mvnosgi/launching/ui/OSGiLaunchConfigurationTab
+ Group.class
+SHA-256-Digest: zRpiNiMT+jmO8vS29htcusOhs6cBlU+8D/uFm1sputQ=
+

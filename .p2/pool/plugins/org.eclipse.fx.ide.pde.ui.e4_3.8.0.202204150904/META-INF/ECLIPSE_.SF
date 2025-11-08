@@ -1,0 +1,356 @@
+Signature-Version: 1.0
+Created-By: 11.0.11 (AdoptOpenJDK)
+SHA-256-Digest-Manifest: rH6cDDlBawH+NSq4rkHUyMEERjI3u68hOpnXgk96y0Y=
+SHA-256-Digest-Manifest-Main-Attributes: Gikgix/GWWmWbrFVOGp8dL9FaA/zDCY
+ lMJ8427S7ojQ=
+
+Name: templates/common/css/images/window-close-over.png
+SHA-256-Digest: 1hJQSwsEGhuQhaxc3TD9r3eJhpVN1KEs/AjEZ8VDVIc=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/boot/NewProjectStructureWizar
+ d$1.class
+SHA-256-Digest: AJcBy4g/+H7xfUs6bS3npI8B9ANiJx3QeGYqVZaMyWE=
+
+Name: templates/common/css/images/top-bar.png
+SHA-256-Digest: 4saiYao0mYrt7e08Ma3IyIaSMSbUWCEQbtYCjbL08kc=
+
+Name: plugin.xml
+SHA-256-Digest: aNyWuts4V19i6RZzYM5HudEChLKE4S4qwKNSEZpUwyA=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/NativeLaunchData.cla
+ ss
+SHA-256-Digest: 3sep6zK8DoBv5WpiIoyW1HCkrnt2Sl7a6x5TBgXM5GY=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/ApplicationE4XMI.xte
+ nd
+SHA-256-Digest: bhsTiytqfCmT19vDWZc+CpL/jxsUmnvNzH+TugUEJwU=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/parts/MediaListPart
+ Tpl.class
+SHA-256-Digest: nX1Mjcbs6yblZunIa3nK5Z6PODNwyQ7BncfYUCu12go=
+
+Name: templates/common/$projectName$.product
+SHA-256-Digest: Tcrdoa3Zn3IyTFU9wY+89nlvs9PUnHSDQfVZl1xxZ9g=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/model/MediaTypeTpl.
+ xtend
+SHA-256-Digest: Pnjx6xEt029zDJRTkWZG9+H+lZHfwfuP2hQaFZUpHwg=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/.TestSuiteGenerator.
+ java._trace
+SHA-256-Digest: 3qpc/JnKHr/90JDFrMeFPT/t4TXQR5ztEceq0qSOqlQ=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/boot/AppBundleProjectData.cla
+ ss
+SHA-256-Digest: JWNGWwZpTBk2O2/1DkdOwQicftjBzQ9VXVEwwBcTRdU=
+
+Name: templates/common/icons/resources/movs/mov1.flv
+SHA-256-Digest: asFyoKNyX9SwHEfBMNdIKOXtzpHRhq5U5GaPjAvG6co=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/parts/.MediaPartTpl
+ .java._trace
+SHA-256-Digest: mAxnvMDJ574wmtQ8OW8XWR2mFm6w+jrg6t0IGNcwJW8=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/.LaunchGenerator.jav
+ a._trace
+SHA-256-Digest: nJyvSxnY5S04UVvNefRz38Tdq6R43o26f3BbbxjoWgY=
+
+Name: templates/common/icons/view-preview.png
+SHA-256-Digest: MxbActdShMMKFXCBNYcecR1E9wnmhMVxa07ktRzROpU=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/LaunchGenerator$3.cl
+ ass
+SHA-256-Digest: FOy9keOvJtrD+asiYvDW0zeoFofpKIiKt+Rog5NknGM=
+
+Name: templates/common/css/images/window-expand.png
+SHA-256-Digest: DBzXEC1pAlMKmGxI48goGdl1567agjp3CS12VdF/QVo=
+
+Name: templates/common/icons/player-volume.png
+SHA-256-Digest: u5YJOQwnVxf2Vm+f8bVMoaqMH/IWHb9ijcR6Cm0l6m8=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/decoration/TopAreaT
+ pl.xtend
+SHA-256-Digest: WDk4lxNvlboVUOxGX/RASgNR/ftes5CKyVJ3Ch8SSxo=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/ApplicationXmiTpl$1
+ .class
+SHA-256-Digest: 2G7r3FnNl77U08022daKFPDW7RKfI052XbEeOsdDlbg=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/boot/NewProjectStructureWizar
+ d.class
+SHA-256-Digest: XgUCLuu7Sh+5OW+FFq6URG3fZc5uwWY/3U3E9q+HKqk=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/boot/GeneratorConfigurationPa
+ ge.class
+SHA-256-Digest: RFd2Mgq82+Vsyb+fDcPr/KMjgVRTdMWZVlp/N9e9fJU=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/NewMediaProjectWizard$1
+ .class
+SHA-256-Digest: 8FJI8u3Hp3AJnoGkIYQXh3zrJUY8OCarh9DDS+hRzHo=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/.NativeLaunchGenerat
+ or.java._trace
+SHA-256-Digest: Me0JTQS59GPCl5O6KSpWROdir3YyfmnrFpPzzg+nblE=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/handlers/OpenHandle
+ rTpl.class
+SHA-256-Digest: G3bzVNryiN7ZGk4dU4s7Q2SH9JHThflyEN/Wi41ZSCE=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/E4LaunchDef.class
+SHA-256-Digest: UWS0IAynqMM3RTAgZi4uy4aERy7Pb/CKj6itnkLMwZ8=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/parts/MediaPartTpl.
+ xtend
+SHA-256-Digest: EgdGDopTc+A3tvPamXHqV6XtzZg82JWOmiYHt6DKSZQ=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/model/.MediaTpl.jav
+ a._trace
+SHA-256-Digest: Cf4jBcEt7QuQKJqLSd7KCDQDj3XJXxvUUsxvn7kDd5Y=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/boot/GeneratorConfigurationPa
+ ge$1.class
+SHA-256-Digest: GxOjhFb4NHgZU8vUaP7AFHjHSe8GjotYhGweRI81a5c=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/NewMediaProjectWizard.c
+ lass
+SHA-256-Digest: 1oGxls9s0VtxPqCq+CKqd5O6cv4QD9cerpBzUyAXOm8=
+
+Name: templates/common/icons/resources/pics/pic2.jpg
+SHA-256-Digest: VHHK61Pk5hIPjhA4dzt5S5TkzJ7cLqj+/bkA4q8Yxwc=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/NativeLaunchGenerato
+ r$1.class
+SHA-256-Digest: iOGNHI33+g7mmgIBBrEqdo8hsT8xzrAxcwkw0vWPMJg=
+
+Name: templates/common/icons/22/player-volume.png
+SHA-256-Digest: 5YIHP7N6FyRcZF/buie5QctLL+JHYA6yJnyoh79GiPY=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/LaunchGenerator.clas
+ s
+SHA-256-Digest: sKlj+s9zXdH+KPCfAO53SuAYTTNvf2ihCCz0BUWgvHo=
+
+Name: templates/common/icons/system-restart.png
+SHA-256-Digest: Qj/NxQz5suEJhSHVsQ4jnt8PcQmjTRIMbOL5gC1PFnU=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/handlers/RefreshHan
+ dlerTpl.class
+SHA-256-Digest: QC6XRrqEjyzR7pkHShwltKaHeMLTqqz86iJ5fOnLhmg=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/decoration/.TopArea
+ Tpl.java._trace
+SHA-256-Digest: MUFIV5S6rXAJxbPp3mAM9RmquK4nh7eMfvZCiyOiv90=
+
+Name: generator-tasks/mediaSample.rtask
+SHA-256-Digest: 4QB+oWvvPyCTmOIAS73O8P/QLze2g5ktYFMbACvt4gY=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/model/.MediaTypeTpl
+ .java._trace
+SHA-256-Digest: LmvV8WEhzitb8yDHYFurotnnRp9Ct7wMO9a3+IL1Eio=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/LaunchGenerator$2.cl
+ ass
+SHA-256-Digest: JXN0ziu1MXla10QPWS259qiz+UMnZntgV9liGozUYcw=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/.ThemeClassGenerator
+ .java._trace
+SHA-256-Digest: TBxos0i2DfGEX4+hhInU7756dWeNcolXz3WKTZfwkSg=
+
+Name: templates/common/icons/resources/pics/pic1.jpg
+SHA-256-Digest: CB7AjRqHfUimJANFXvGIIamMC6FCbTKb+hw2XHqCWy4=
+
+Name: templates/common/css/images/window-min-over.png
+SHA-256-Digest: IQlK/YKclXx4PSGpogipuAn8Sngy/DRshuWS9GFQ/XI=
+
+Name: templates/common/css/images/window-min.png
+SHA-256-Digest: Xyl388DoiL0rtQ9lE2Cd48zHliYsW+MTYXIfm50fLaA=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/boot/GeneratorConfigurationPa
+ ge$2.class
+SHA-256-Digest: roGjo1BoD11mYxsOfwPW7PbJp40p9V33hFsSKIFn7ww=
+
+Name: templates/common/css/images/window-corner.png
+SHA-256-Digest: XrCJ+uogkefXrTVS6DTNHoJtwyvnBdyaqdl/0Brr7QM=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/NewMediaProjectWizard$2
+ .class
+SHA-256-Digest: A3511DI2reAXjOKR1m1vl1Db9/g9nw6pijGqRpabrN8=
+
+Name: templates/common/icons/22/kaffeine.png
+SHA-256-Digest: FR7MdanyLLLr5g3uDjsS0dNazwb4w6MR29yWjxoc1+A=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/ApplicationE4XMI.cla
+ ss
+SHA-256-Digest: Gu8H4Rhz7gjRek8XH8TwrK9W6+SAGAk3jEzI6Nhp3ho=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/NativeLaunchData.xte
+ nd
+SHA-256-Digest: T+Umh/QWuQrw5dXd4cr5QiT5muJGjqAxeY+BOH2Cda0=
+
+Name: templates/common/css/images/window-close.png
+SHA-256-Digest: u5/X9ATnb1KV+VEcRKvYBTH5tY+1wwiJaaAAmpstjY0=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/decoration/TopAreaT
+ pl.class
+SHA-256-Digest: iksaT+SnljhHhhp23wF2I26ZnoSjRULBxFfeWpVmFAU=
+
+Name: build_bin/org.eclipse.fx.ide.ant-0.9.0.jar
+SHA-256-Digest: YbuBmmg8qSmtKiojC7KMHhSsLe12IqhJWk+hjAQky3E=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/handlers/OpenHandle
+ rTpl.xtend
+SHA-256-Digest: zEYE8M52Nh+dggZTiMgOU7IQT0TU01uDcbALcyaRLCM=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/LaunchGenerator$4.cl
+ ass
+SHA-256-Digest: +1UcW/RigdD/Iy43TCn00MLUJETSGkPZtAU9buuQZFc=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/parts/.MediaListPar
+ tTpl.java._trace
+SHA-256-Digest: KMJqvAuGwLCQkaAjG3Q6azstBJAtwarZCuURutaknRM=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/parts/MediaPartTpl.
+ class
+SHA-256-Digest: xfGm/QLhTcD4gw/avU7VuOn1g8+SvVCGC1lxluZIXHM=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/NativeLaunchGenerato
+ r.xtend
+SHA-256-Digest: U3Ij/HRsNu/K+HEIiGmU2X+Xc7QBGP83eZJnVetHHWc=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/SampleTestCaseGenera
+ tor.xtend
+SHA-256-Digest: JhQzmaCHzp7zDPLLtu0FKtBKZAKhfqMvA57wM2Sne6k=
+
+Name: templates/common/css/images/window-expand-over.png
+SHA-256-Digest: Y+DOydp4vF5Vn15tpT/cPOzVF6+lvT+5j5H6BRFTShU=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/model/MediaTypeTpl.
+ class
+SHA-256-Digest: D/1acVaYRntiJD8rWtpyNFsQaDL3I0M9WXaonUZWqAc=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/parts/MediaListPart
+ Tpl.xtend
+SHA-256-Digest: D7KDW3ZV9ZP+CEmQ/rmJV+/tpsq9pwp9z7kwNG7y8G0=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/.SampleTestCaseGener
+ ator.java._trace
+SHA-256-Digest: ZgvXVFZl31/FALqJhr++VAjg283VemCbqrAeOWd4VAM=
+
+Name: templates/common/css/images/clef.png
+SHA-256-Digest: 864ikd6Xx+IIk32fLo4yU6Ab0vGUO+lIb1p9fPiAKOA=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/.ApplicationE4XMI.ja
+ va._trace
+SHA-256-Digest: oCGOpcXhSWmiJ+O3EkHlUMrOYZ50f3mbNWIVOWAGN3A=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/handlers/RefreshHan
+ dlerTpl.xtend
+SHA-256-Digest: EMwH6zenM4LxGEWwt8tOTqyH9RrQdnS9krSwEn5UiPI=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/LaunchGenerator$1.cl
+ ass
+SHA-256-Digest: +kCPdh2Kvjv+NjLWMqlDG6u+yYXVp9svHeWvVcQHltQ=
+
+Name: templates/common/icons/games-config-background.png
+SHA-256-Digest: ZkjfkVIoVFodx2nQ+QfSlL3hy5OTv9Y9nhFuv01uuW8=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/handlers/.RefreshHa
+ ndlerTpl.java._trace
+SHA-256-Digest: 6T95QdKYMvEcO7z05whzYg68AsGSk3gVf1qiiM2D1mM=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/decoration/.Decorat
+ ionControllerTpl.java._trace
+SHA-256-Digest: VO9xA7GXevvE8llOn2Z2mD9JvsNHMrZARX+Ou8VJh6w=
+
+Name: templates/css/default.css
+SHA-256-Digest: gdqlH1YOpxUMvIDajjIvt4R49d9e4JzpuMnHWKyPQ/U=
+
+Name: templates/common/icons/kaffeine.png
+SHA-256-Digest: 10Z9+jqPNVby3XTFEeZ85SDy/+iDhG6iH+ripuym0+0=
+
+Name: about.html
+SHA-256-Digest: Yi9zDHX8wBq8whz49YuzrE9BrAO6CJec5MP7wHOlFfY=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/LaunchGenerator.xten
+ d
+SHA-256-Digest: OxxKn+cwD5A6P3wEszpPJBhOpYHkJceADXitMLA9hjQ=
+
+Name: donotdelete
+SHA-256-Digest: GwNgtEsFGlr+nXOnAIOpeehsgwV5lAAM8Q1tH9AdWpQ=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/boot/NewProjectStructureWizar
+ d$2.class
+SHA-256-Digest: 9bdsrIgNiUZKVxtn2ZQvAYWtK+7ObBlGOg3brar7CXw=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/TestSuiteGenerator.c
+ lass
+SHA-256-Digest: U1QNMPwusCVnPww7jBrjct0a+16/vdASdGRJA+Kkfrw=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/model/MediaTpl.xten
+ d
+SHA-256-Digest: N4HBxdqJxcKNIXA3qC6kuz9J4vsPyEG9TpISk6agcB0=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/ApplicationXmiTpl.c
+ lass
+SHA-256-Digest: ALlpbo9/uFide6oAPPG3FYKMgsgSeq1KYz/otYyEOgw=
+
+Name: templates/common/icons/22/games-config-background.png
+SHA-256-Digest: IKH1JmDTfSHyk1FEW1ItOubwsgqZAkQqwgNxsszUuXE=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/.ApplicationXmiTpl.
+ java._trace
+SHA-256-Digest: sNQlLyksUtWAfyyoYTIm5sQZYMqiUjVAKd/Hd0W3L88=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/decoration/Decorati
+ onControllerTpl.class
+SHA-256-Digest: EcxltXUjTr5uftwk47F9JNoKz018R2TntxlAkNtdnaA=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/ThemeClassGenerator.
+ class
+SHA-256-Digest: lw+UBooV2F7Z98GRV8XG8xfM6swcmSpkVh26rl6W1Qg=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/boot/GeneratorConfigurationPa
+ ge$3.class
+SHA-256-Digest: APjzcnXMb2ns6sf0V0LtJEgGMIShQG35xUllrRojVog=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/ThemeClassGenerator.
+ xtend
+SHA-256-Digest: qPGOwQtS6eiBuWVDs+QxxD6fbpc766z0rx8blnJkTq8=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/decoration/Decorati
+ onControllerTpl.xtend
+SHA-256-Digest: US/s+nMEmmNzdD011PC/QesAvL0exdNAXoafBJdNsJg=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/NativeLaunchGenerato
+ r.class
+SHA-256-Digest: o6BcAWtaIVpfdraPY2YhjjBRZcWU/9z8WdC9FELeGXo=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/handlers/.OpenHandl
+ erTpl.java._trace
+SHA-256-Digest: 24hjnvhUo9pOw1db5uOJFkW2JhiP2feMuALUaWiS5eU=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/ApplicationXmiTpl.x
+ tend
+SHA-256-Digest: dUfByrY7VnoWQomVcZ65QxEAXXgP8T3evTPuVUaRmGE=
+
+Name: generator-tasks/e4App.rtask
+SHA-256-Digest: 4GidO1wS7BlPSkRMtWlo57yzcv7dcqdAD+U+9JbDtyo=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/.NativeLaunchData.ja
+ va._trace
+SHA-256-Digest: bOD04PvtB3w8cMv1VAFX4kueSFP7ewirc1DNC5OyCpo=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/TestSuiteGenerator.x
+ tend
+SHA-256-Digest: TNDHZXG+4aKVK92y/iH2uq2uDdg3C7mAUgr3yktqC8M=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/template/SampleTestCaseGenera
+ tor.class
+SHA-256-Digest: He/mkVPRunD8xXnGlBs/TG9j1O5eK8Wly2eNPJN9c5Q=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/Activator.class
+SHA-256-Digest: lDdmVje5Ns7UE4iRZvfTf0bXzO93fWBCRyx8R+idRhc=
+
+Name: org/eclipse/fx/ide/pde/ui/e4/project/media/tpl/model/MediaTpl.clas
+ s
+SHA-256-Digest: ByaIBg7Clh1R/ppdyq99zoGrv8FxIgKQNYAR00sd2m4=
+

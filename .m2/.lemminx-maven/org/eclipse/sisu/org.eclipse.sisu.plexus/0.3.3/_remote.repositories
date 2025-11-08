@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sun Jun 01 13:23:40 GMT-03:00 2025
+org.eclipse.sisu.plexus-0.3.3.jar>central=
+org.eclipse.sisu.plexus-0.3.3.pom>central=

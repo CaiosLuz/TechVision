@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 lado-esquerdo d-flex justify-content-center align-items-center">
+            <img src="images/login/logo.png" alt="imagem">
+        </div>
+
+        <div class="col-6 lado-direito">
+            <div class="row justify-content-center align-items-center min-vh-100">
+                <div class="col-10 formulario">
+                    <p class="text-center">Login</p>
+                    <div *ngIf="erro" class="alert alert-danger">{{ erro }}</div>
+                        <form (ngSubmit)="login()">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email"  [(ngModel)]="email" name="email" required aria-describedby="emailHelp">
+                                <div *ngIf="emailErro" class="text-danger mt-1">{{ emailErro }}</div> 
+                            </div>
+                            <div class="mb-3">
+                                <label for="senha" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="senha" [(ngModel)]="senha" name="senha" required id="exampleInputPassword1">
+                                <div *ngIf="senhaErro" class="text-danger mt-1">{{ senhaErro }}</div> 
+                            </div>
+                            <button type="submit" class="btn-entrar w-100" [disabled]="carregando">
+                                {{ carregando ? 'Entrando...' : 'Entrar' }}
+                            </button>
+                            <div *ngIf="mensagemErro" class="alert alert-danger mt-2">
+                                {{ mensagemErro }}
+                            </div>
+                        </form>
+                        <div class="row text-center">
+                            <div class="col py-3">
+                                <p><a routerLink="/recuperar-senha">Esqueci a senha</a> | <a routerLink="/registrar">Registrar-se</a></p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

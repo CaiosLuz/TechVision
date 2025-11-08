@@ -1,0 +1,178 @@
+Signature-Version: 1.0
+Created-By: 11.0.11 (AdoptOpenJDK)
+SHA-256-Digest-Manifest: NirMapnDCHRYlKSKgw2FM1J2DQAyeU19qdmMx3U8kUs=
+SHA-256-Digest-Manifest-Main-Attributes: DF4JlXlNHvMUTklGAw7ZO6k0DSjlIsg
+ EXo6qOlVLq1g=
+
+Name: org/eclipse/fx/ide/l10n/ui/highlighting/NLSHighlightingCalculator.
+ class
+SHA-256-Digest: C3yya19E8tXeCt0pAOLEjZTitBa1uLeiCE+Zn9SU88s=
+
+Name: org/eclipse/fx/ide/l10n/ui/highlighting/NLSHighlightingCalculator$
+ 2.class
+SHA-256-Digest: VjcYTdpkG1vsc/jvMOWN2B/nFlfiP42hc2J3jOxs35I=
+
+Name: plugin.xml
+SHA-256-Digest: 5J4FbwCUyDmt5M4p+MJ/Ta7gx7MDI2gGPByzF6hY8X8=
+
+Name: org/eclipse/fx/ide/l10n/ui/outline/.NLSDslOutlineTreeProvider.java
+ ._trace
+SHA-256-Digest: W3DN2VFVkj54LVzDJHj9pNSKvg+luzDS91e3ZZXjYfc=
+
+Name: org/eclipse/fx/ide/l10n/ui/edit/StringReplacementHandler$LeftGuill
+ emet.class
+SHA-256-Digest: GNMAyui6edhmWLl/0GP1NTcGXLcAwVGcVUc/QFVPrdA=
+
+Name: org/eclipse/fx/ide/l10n/ui/outline/NLSDslOutlineTreeProvider.class
+SHA-256-Digest: zA/SCKisJjVrr9mlt+QLJPVn7ubKe3vz9PTObg0/bvs=
+
+Name: org/eclipse/fx/ide/l10n/ui/contentassist/antlr/internal/InternalNL
+ SDsl.tokens
+SHA-256-Digest: DPFhNUkoAdllA5ENQUfaqhZgvZ+UzNUCHOYmlbg0M+w=
+
+Name: org/eclipse/fx/ide/l10n/ui/quickfix/.NLSDslQuickfixProvider.java._
+ trace
+SHA-256-Digest: Dhg3birqCw3/Ax7BfmPQNeyAB2Zrfy0/Oy4lQgbyYVc=
+
+Name: org/eclipse/fx/ide/l10n/ui/NLSDslUiModule.class
+SHA-256-Digest: 4ia0rhaY+atzA9ec5xY63/uzTLPSXIMknlqlLFJ7Jks=
+
+Name: org/eclipse/fx/ide/l10n/ui/edit/StringReplacementHandler.class
+SHA-256-Digest: zXO+rPxwDJSSus2yyhxwRaW/4AnS5UZb/aMQfajfbTk=
+
+Name: org/eclipse/fx/ide/l10n/ui/highlighting/NLSHighlightingCalculator.
+ xtend
+SHA-256-Digest: StpxyCWUApGOmYpoV8Eod67GDnJOSimc2IRqsI43gG8=
+
+Name: org/eclipse/fx/ide/l10n/ui/labeling/NLSDslLabelProvider.xtend
+SHA-256-Digest: /Nf9GXkADSJ8Uof+UXxSJsf8ght9XFGm0TCF5RvR0dU=
+
+Name: org/eclipse/fx/ide/l10n/ui/contentassist/NLSDslProposalProvider.cl
+ ass
+SHA-256-Digest: GfVXpLGZVOIhETZUxSaJmB29WYvKmY/oHPUTfGUekEs=
+
+Name: org/eclipse/fx/ide/l10n/ui/labeling/NLSDslDescriptionLabelProvider
+ .xtend
+SHA-256-Digest: 6NntEwt+08+Dd1qkS7G9gzKKDkHElb6bKX5Xs5CpgxA=
+
+Name: org/eclipse/fx/ide/l10n/ui/highlighting/NLSHighlightingConfigurati
+ on.class
+SHA-256-Digest: XYOgf03ifGxV/gUf8Zuw1ouGCDpFhslqoiqQrboes3Q=
+
+Name: org/eclipse/fx/ide/l10n/ui/outline/NLSDslOutlineTreeProvider.xtend
+SHA-256-Digest: +te+Aw88BecA4XeBaEYtqhO1gJC++DjHb43O+GmTGfI=
+
+Name: org/eclipse/fx/ide/l10n/ui/contentassist/antlr/internal/InternalNL
+ SDsl.g
+SHA-256-Digest: ydhY18kJOvp5FXRlUtdbrmup5ershzJONf7MGXSSqVo=
+
+Name: org/eclipse/fx/ide/l10n/ui/contentassist/antlr/NLSDslParser$1.clas
+ s
+SHA-256-Digest: 9zzCrdDqD6B3Ht0GKKNUkW/RDo2cLUwwFMHe3US2Kgs=
+
+Name: org/eclipse/fx/ide/l10n/ui/quickfix/NLSDslQuickfixProvider.xtend
+SHA-256-Digest: ZYo2ioeHFTq7aPIdAqF+SIhPGx1UW22wOalgqhSb0/s=
+
+Name: org/eclipse/fx/ide/l10n/ui/highlighting/.NLSHighlightingConfigurat
+ ion.java._trace
+SHA-256-Digest: RvTudvx4TfJx33S/7gWRoiJwU7lE10cM1w9UedVY/g8=
+
+Name: org/eclipse/fx/ide/l10n/ui/labeling/.NLSDslDescriptionLabelProvide
+ r.java._trace
+SHA-256-Digest: NO7nCzTpBi4N3S7Kn14hNU8vZOefTkcKcDpuyqzLWq0=
+
+Name: org/eclipse/fx/ide/l10n/ui/highlighting/.TokenToAttributeIdMapper.
+ java._trace
+SHA-256-Digest: z8YVa4J0lTodTqhH7f9em30oylmvBkOrAYa9GlcqWTw=
+
+Name: org/eclipse/fx/ide/l10n/ui/highlighting/.NLSHighlightingCalculator
+ .java._trace
+SHA-256-Digest: x/aCgoQvwFDgOqscmvCfFgd53xKRTBQ63Xm0fq71niQ=
+
+Name: org/eclipse/fx/ide/l10n/ui/contentassist/NLSDslProposalProvider.xt
+ end
+SHA-256-Digest: vNx9eu3h3r448QPbz9QanWKJNsGdX0kX8oMcfdDurlY=
+
+Name: org/eclipse/fx/ide/l10n/ui/contentassist/.NLSDslProposalProvider.j
+ ava._trace
+SHA-256-Digest: VUTJXlB9EHfY/k5GqhPkppdlrnH9r/EwbB0wAM8NVEU=
+
+Name: org/eclipse/fx/ide/l10n/ui/contentassist/antlr/internal/InternalNL
+ SDslLexer$DFA27.class
+SHA-256-Digest: L8ozCAXe/vjvwAND8y02EG0WyFtQxzGL6g/Dy83QVz0=
+
+Name: org/eclipse/fx/ide/l10n/ui/highlighting/TokenToAttributeIdMapper.x
+ tend
+SHA-256-Digest: aVDCYJJQut3QrOQ2Zcf+cjb1skxTZJvmdbecUHaO2pQ=
+
+Name: about.html
+SHA-256-Digest: tEh8bKJRnZg3WieCp7TvZZBNWZe0ab5q5kYbPOYUiUI=
+
+Name: org/eclipse/fx/ide/l10n/ui/contentassist/antlr/NLSDslParser.class
+SHA-256-Digest: rrRcDWkZzqmXeCiwkXJ93UgDlnb+hM6cTJpmoZVMzLc=
+
+Name: org/eclipse/fx/ide/l10n/ui/contentassist/antlr/PartialNLSDslConten
+ tAssistParser.class
+SHA-256-Digest: sHA0r3sRUhcokLRBgDyiiLKJ6EX2qhtRB0kS++gGqls=
+
+Name: org/eclipse/fx/ide/l10n/ui/highlighting/NLSHighlightingConfigurati
+ on.xtend
+SHA-256-Digest: /IhWB7y02v9Em3JBTP9MRM8D24rrpRAqSuhHdItuO1k=
+
+Name: org/eclipse/fx/ide/l10n/ui/NLSDslExecutableExtensionFactory.class
+SHA-256-Digest: XJzIpYrkIqdbRFiFxhli/ePORxwzwg1ybnwJAhX+2LU=
+
+Name: org/eclipse/fx/ide/l10n/ui/contentassist/AbstractNLSDslProposalPro
+ vider.class
+SHA-256-Digest: Ogw2+N8xexPiE67TRHVr3iv9esbS5KIxaRZGx9aWUd0=
+
+Name: org/eclipse/fx/ide/l10n/ui/quickfix/NLSDslQuickfixProvider.class
+SHA-256-Digest: 16RRj5J2y0591xiZwZ2iN4zbbM32HuvA2WIpZq9ULIE=
+
+Name: org/eclipse/fx/ide/l10n/ui/highlighting/NLSHighlightingCalculator$
+ 1.class
+SHA-256-Digest: koXzjM1KQPmIXNoFk+i3V96WY9WODHUYAJ9fNOjQyYs=
+
+Name: org/eclipse/fx/ide/l10n/ui/edit/StringReplacementHandler$RightGuil
+ lemet.class
+SHA-256-Digest: cBon9Wuz4p7RLpyB0ErjNpd8GDeBdNrsL+6pRyJvulY=
+
+Name: org/eclipse/fx/ide/l10n/ui/edit/StringReplacementHandler$1.class
+SHA-256-Digest: UArEvljKoYHObZNm2iAvctctz/J6DmvzoHSv4OsD3BI=
+
+Name: org/eclipse/fx/ide/l10n/ui/edit/.StringReplacementHandler.java._tr
+ ace
+SHA-256-Digest: ZzY8tai3gPySfBf8NvTo2881CU0hU/c2NcdOiFPB/EQ=
+
+Name: org/eclipse/fx/ide/l10n/ui/contentassist/antlr/internal/InternalNL
+ SDslLexer.class
+SHA-256-Digest: SZXl4PUb1RUr/v71M0tZSm5iRJ1JGUuxEXEt8xSBRuk=
+
+Name: org/eclipse/fx/ide/l10n/ui/contentassist/antlr/internal/InternalNL
+ SDslParser.class
+SHA-256-Digest: 6XReCR+0gMRX0oaAGkEUAeSqmt+ENn1tKCtV6Dbkcr0=
+
+Name: org/eclipse/fx/ide/l10n/ui/AbstractNLSDslUiModule.class
+SHA-256-Digest: x2daqzAgWk83Gs2Fwtwmq5IiCxERP1lFjq7FHd1qh6o=
+
+Name: org/eclipse/fx/ide/l10n/ui/labeling/.NLSDslLabelProvider.java._tra
+ ce
+SHA-256-Digest: 734wCWIkyB6GpU6R0W9C61sq/P/rR1gr8aJtBeFkiy0=
+
+Name: org/eclipse/fx/ide/l10n/ui/labeling/NLSDslDescriptionLabelProvider
+ .class
+SHA-256-Digest: 9sLBDpJeB9so9WvUgSXQ12TDqIuTh45MBQCc4H1oc3U=
+
+Name: org/eclipse/fx/ide/l10n/ui/highlighting/TokenToAttributeIdMapper.c
+ lass
+SHA-256-Digest: B5qZ0yfPNIAEtleBvNB2JKeX/5RjvMCc4UUMDIW4Jo4=
+
+Name: org/eclipse/fx/ide/l10n/ui/edit/StringReplacementHandler.xtend
+SHA-256-Digest: ORCvQb0EcTcRGWWrpLt0PStiOi7Ruw2G+98aQ368htY=
+
+Name: org/eclipse/fx/ide/l10n/ui/internal/NLSDslActivator.class
+SHA-256-Digest: FzzA5nnD+drxjl8xw2qq4F+bIeYGoewKIiVXWLHF3rk=
+
+Name: org/eclipse/fx/ide/l10n/ui/labeling/NLSDslLabelProvider.class
+SHA-256-Digest: 4Q91fisFsfsqsLchn+hKIgJCManiucBbyylOT7fyhlA=
+

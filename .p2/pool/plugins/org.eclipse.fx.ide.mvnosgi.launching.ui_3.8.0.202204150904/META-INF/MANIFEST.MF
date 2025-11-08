@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.fx.ide.mvnosgi.launching.ui;singleton:=
+ true
+Bundle-Name: Ui
+Bundle-Version: 3.8.0.202204150904
+Built-By: jenkins
+Require-Bundle: org.eclipse.debug.ui;bundle-version="3.12.0",org.eclipse
+ .fx.ide.mvnosgi.launching;bundle-version="1.0.0",org.eclipse.swt;bundle
+ -version="3.106.0",org.eclipse.jdt.core,org.eclipse.jface,org.eclipse.j
+ dt.ui,org.eclipse.ui.workbench,org.eclipse.equinox.common;bundle-versio
+ n="3.9.0",org.eclipse.m2e.core;bundle-version="1.8.0",org.eclipse.m2e.j
+ dt;bundle-version="1.8.0",org.eclipse.jdt.launching,org.eclipse.osgi;bu
+ ndle-version="3.12.0",org.eclipse.jdt.debug.ui
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/efxclips
+ e/org.eclipse.efxclipse.git;path="bundles/tooling/org.eclipse.fx.ide.mv
+ nosgi.launching.ui";tag="r3.8.0";commitId=e4e7626ba2201d0e822fc9ead6ba2
+ 5a0fe7ec8af
+Created-By: Apache Maven 3.5.4
+Build-Jdk: 1.8.0_202
+
+Name: org/eclipse/fx/ide/mvnosgi/launching/ui/MainLauncherTab.class
+SHA-256-Digest: 3CGOQJPumtrgs6EPKN0gNM4upD8hT3pITyjBrTEPzs0=
+
+Name: plugin.xml
+SHA-256-Digest: wzz1+cpXgzxAfYyo0IwSUHRI+p5xBCtfjVBHnKXJEpA=
+
+Name: icons/osgiconsole.png
+SHA-256-Digest: tKvuwTZ+u4xh+/CDkASHY2JUkY7thNX12KQ4seds+T8=
+
+Name: org/eclipse/fx/ide/mvnosgi/launching/ui/OSGiLaunchConfigurationTab
+ Group.class
+SHA-256-Digest: 2aLnbgF8zyUl/U5b87wtUIMjf7Un33Nz9xpEVhT0JIc=
+

@@ -1,0 +1,33 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="p-4" style="width: 24rem;">
+    <h3 class="text-center mb-3">Recuperar Senha</h3>
+
+    <form (ngSubmit)="recuperarSenha()">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input 
+          type="email" 
+          class="form-control" 
+          id="email" 
+          [(ngModel)]="email" 
+          name="email" 
+          required>
+        <div *ngIf="emailErro" class="text-danger mt-1">
+          {{ emailErro }}
+        </div>
+      </div>
+
+      <button type="submit" class="btn-entrar" [disabled]="carregando">
+        {{ carregando ? 'Enviando...' : 'Enviar link de recuperação' }}
+      </button>
+
+      <div *ngIf="mensagemSucesso" class="alert alert-success mt-2">
+        {{ mensagemSucesso }}
+      </div>
+
+      <div *ngIf="mensagemErro" class="alert alert-danger mt-2">
+        {{ mensagemErro }}
+      </div>
+    </form>
+  </div>
+</div>
