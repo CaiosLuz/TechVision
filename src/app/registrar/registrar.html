@@ -1,0 +1,24 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="p-4" style="width: 24rem;">
+    <h3 class="text-center mb-3">Cadastro</h3>
+
+    <div *ngIf="mensagemErro" class="alert alert-danger">{{ mensagemErro }}</div>
+    <div *ngIf="mensagemSucesso" class="alert alert-success">{{ mensagemSucesso }}</div>
+
+    <form (ngSubmit)="registrar()">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" class="form-control" id="senha" [(ngModel)]="senha" name="senha" required>
+      </div>
+
+      <button type="submit" class="btn-entrar" [disabled]="carregando">
+        {{ carregando ? 'Cadastrando...' : 'Cadastrar' }}
+      </button>
+    </form>
+  </div>
+</div>
