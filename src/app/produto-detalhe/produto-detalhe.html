@@ -1,113 +1,114 @@
 <app-menu-superior></app-menu-superior>
 
-<div class="container-fluid" *ngIf="produto">
-  <div class="row justify-content-center align-items-center">
+<div class="container-fluid mt-5">
+  @if (produto) {
+    <div class="row justify-content-center align-items-start">
 
-    <div class="card col-5 mt-5">
-      <div class="produto-container mb-3">
-        <!-- Imagem principal do produto -->
-        <img [src]="imagemPrincipal" alt="Produto" class="img-fluid produto-principal">
+      <div class="col-md-5">
+        <div class="card p-3">
+          <div class="position-relative text-center">
+            <img [src]="imagemPrincipal" alt="Produto" class="img-fluid rounded produto-principal">
+            <img src="images/produto/coracao.png" alt="Favoritar" class="coracao-overlay">
+          </div>
 
-        <!-- Coração sobreposto -->
-        <img src="images/produto/coracao.png" alt="coração" class="coracao-overlay">
+          <div class="d-flex justify-content-center gap-2 mt-3 flex-wrap">
+            @for (img of imagens; track img) {
+              <img [src]="img"
+                   class="img-thumbnail"
+                   (click)="imagemPrincipal = img"
+                   style="width: 80px; height: 80px; object-fit: cover; cursor: pointer;">
+            }
+          </div>
+        </div>
       </div>
 
-      <div class="d-flex gap-2 justify-content-center">
-        <img *ngFor="let img of imagens"
-            [src]="img"
-            class="img-thumbnail"
-            (click)="imagemPrincipal = img"
-            style="width: 80px; cursor: pointer;">
+      <div class="col-md-5">
+        <div class="info-produto">
+
+          <div class="mb-2 text-warning">
+            ⭐⭐⭐⭐⭐ ({{ produto.avaliacao || 0 }} avaliações)
+          </div>
+
+          <h3 class="fw-semibold mb-3">{{ produto.nome }}</h3>
+
+          <div class="row">
+            <div class="col-6">Comprimento da Haste: {{ produto.haste || 0 }}</div>
+            <div class="col-6">Formato: {{ produto.formato || '-' }}</div>
+          </div>
+          <div class="row">
+            <div class="col-6">Tamanho da Ponte: {{ produto.ponte || 0 }}</div>
+            <div class="col-6">Gênero: {{ produto.genero || 'Unissex' }}</div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">Largura da Lente: {{ produto.largura_lente || 0 }}</div>
+          </div>
+
+          <div class="preco">
+            <p class="h5 mb-0 text-primary">R$ {{ produto.preco | number:'1.2-2' }}</p>
+            <p class="text-muted">
+              Em até {{ produto.parcelas || 1 }}x de R$ {{ produto.valor_parcela || 0 | number:'1.2-2' }} s/ juros
+            </p>
+            <p class="text-success fw-semibold">
+              R$ {{ produto.preco_pix | number:'1.2-2' }} no Pix
+            </p>
+          </div>
+
+          <div class="mt-3">
+            <p class="fw-bold mb-1">Cores:</p>
+            <p>{{ produto?.cores?.join(' ') || 'Sem cores disponíveis' }}</p>
+          </div>
+
+          <div class="d-flex align-items-center gap-3 mt-3">
+            <div class="input-group w-auto">
+              <button class="btn btn-outline-secondary" (click)="alterarQuantidade(-1)">-</button>
+              <input type="text" class="form-control text-center" [(ngModel)]="quantidade" style="width: 60px;">
+              <button class="btn btn-outline-secondary" (click)="alterarQuantidade(1)">+</button>
+            </div>
+
+            <button class="btn btn-outline-primary flex-grow-1 mt-3" (click)="adicionarAoCarrinho()">
+              🛒 Adicionar ao Carrinho
+            </button>
+          </div>
+
+          <button class="btn btn-success w-100 mt-5" (click)="comprarAgora()">
+            Comprar Agora
+          </button>
+
+          <div class="text-center text-muted mt-3 small">
+            <p>🕒 7 dias para troca ou devolução</p>
+          </div>
+        </div>
       </div>
 
-      <div class="row">
-        <p><strong>Detalhes do produto:</strong></p>
-        <p>{{ produto.descricao }}</p>
+      <div class="row mt-5 justify-content-center">
+        <div class="col-md-10">
+          <div class="card p-4 descricao-produto">
+            <h5 class="fw-bold mb-3">Detalhes do produto</h5>
+            <div class="row">
+              <div class="col-md-7">
+                <p>
+                  {{ produto.descricao }}
+                </p>
+              </div>
+              <div class="col-md-5">
+                <ul class="list-unstyled">
+                  <li><strong>Gênero:</strong> {{ produto.genero }}</li>
+                  <li><strong>Marca:</strong> {{ produto.marca }}</li>
+                  <li><strong>Modelo:</strong> {{ produto.modelo }}</li>
+                  <li><strong>Tamanho:</strong> {{ produto.tamanho }}</li>
+                  <li><strong>Cor:</strong> {{ produto.cor }}</li>
+                  <li><strong>Material:</strong> {{ produto.material }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="col-5 info-produto">
-      <div class="row justify-content-start">
-
-        <div class="row avaliacao">
-          <div class="col">
-            ⭐⭐⭐⭐⭐ ({{ produto.avaliacao || '0' }} avaliações)
-          </div>
-        </div>
-
-        <div class="row nome-modelo">
-          <div class="col">
-            {{ produto.nome }}
-          </div>
-        </div>
-
-        <div class="row comprimento-haste">
-          <div class="col-6">
-            Comprimento da Haste: {{ produto.haste || 0 }}
-          </div>
-          <div class="col-6">
-            Formato: {{ produto.formato || '' }}
-          </div>
-        </div>
-
-        <div class="row tamanho-ponte">
-          <div class="col">
-            Tamanho da Ponte: {{ produto.ponte || 0 }}
-          </div>
-          <div class="col">
-            Gênero: {{ produto.genero || 'Unisex' }}
-          </div>
-        </div>
-
-        <div class="row largura-lente">
-          <div class="col">
-            Largura da Lente: {{ produto.largura_lente || 0 }}
-          </div>
-        </div>
-
-        <div class="row preco-prazo">
-          <div class="col">
-            R${{ produto.preco || '' }} Em até {{ produto.parcelas || '1' }}x de R${{ produto.valor_parcela || '0' }} s/juros
-          </div>
-        </div>
-
-        <div class="row preco-a-vista">
-          <div class="col">
-            R${{ produto.preco_pix || '0' }} Por pagamento via Pix
-          </div>
-        </div>
-
-        <div class="row nome-modelo">
-          <div class="col">
-            <div class="row">
-              <p>Cores</p>
-            </div>
-            <div class="row">
-                {{ produto?.cores?.join(' ') || 'Sem cores' }}
-            </div>
-          </div>
-        </div>
-
-        <div class="row nome-modelo">
-          <div class="col-3">
-            - 1 + 
-          </div>
-          <div class="col-9">
-            ADICIONAR AO CARRINHO
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col troca-devolucao justify-content-center">
-            7 DIAS PARA TROCA OU DEVOLUÇÃO 
-          </div>
-        </div>
-        
-      </div>
+  } @else {
+    <div class="text-center mt-5">
+      <p>Carregando produto...</p>
     </div>
-  </div>
+  }
 </div>
-
-<div *ngIf="!produto">
-  <p>Carregando produto...</p>
-</div>
+<app-footer></app-footer>

@@ -12,13 +12,11 @@
                   {{ ((1 - (produto.preco_pix / produto.preco)) * 100) | number:'1.0-0' }}% de Desconto no Pix
                 </div>
               }
-
                 <img 
                     [src]="produto.imagens_produto?.[0]?.url || 'assets/mock/produto.png'" 
                     alt="{{ produto.nome }}"
                     class="img-fluid"
                 />
-
               <div class="card-body">
                 <p class="titulo">{{ produto.nome }}</p>
                 <p class="preco">R$ {{ produto.preco | number:'1.2-2' }}</p>
