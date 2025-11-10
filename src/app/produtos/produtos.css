@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Irish+Grover&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.titulo {
+    font-family: "Public Sans", system-ui;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.preco {
+    font-family: "Public Sans", system-ui;
+    font-size: 14px;
+    font-weight: bold;
+    color: #3E4A52;
+}
+
+.produtos {
+    margin: 5px;
+}
+
+.titulo-produtos {
+    font-family: "Public Sans", system-ui;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.card {
+    border: 1px solid #E4E7E9
+}
+
+.desconto {
+    font-family: "Public Sans", system-ui;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3E4A52;
+    color: #FFFFFF;
+    border-radius: 4px;
+    height: 26px;
+}

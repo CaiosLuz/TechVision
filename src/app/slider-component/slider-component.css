@@ -1,5 +1,5 @@
-.picsum-img-wrapper img {
-  max-height: 400px; /* Ajuste conforme necessário */
+.custom-image {
+  max-height: 550px;
   object-fit: cover;
 }
 .carousel-caption {

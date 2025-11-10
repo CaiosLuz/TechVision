@@ -1,13 +1,11 @@
-// src/app/services/auth.service.ts
 import { Injectable } from '@angular/core';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
-@Injectable({ providedIn: 'root' }) // permite injetar o serviço em qualquer componente
+@Injectable({ providedIn: 'root' })
 export class AuthService {
   private supabase: SupabaseClient;
 
   constructor() {
-    // Substitua pelos dados do seu projeto Supabase
     this.supabase = createClient(
       'https://oyagtdnhodtpmtpzrabh.supabase.co',
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im95YWd0ZG5ob2R0cG10cHpyYWJoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjIyOTI2ODAsImV4cCI6MjA3Nzg2ODY4MH0.iKVeJg9Yw2dMV9OXJN_EIkIFcHPlnp1gnLblLr_Vay0'
@@ -18,7 +16,6 @@ export class AuthService {
     return this.supabase;
   }
 
-   // Login com email e senha
   async login(email: string, password: string) {
     const { data, error } = await this.supabase.auth.signInWithPassword({
       email,
@@ -28,13 +25,11 @@ export class AuthService {
     return data;
   }
 
-  // Logout
   async logout() {
     const { error } = await this.supabase.auth.signOut();
     if (error) throw error;
   }
 
-  // Registrar usuário
   async signUp(email: string, password: string) {
     const { data, error } = await this.supabase.auth.signUp({
       email,
@@ -44,7 +39,6 @@ export class AuthService {
     return data;
   }
 
-  // Pegar usuário logado
   getUser() {
     return this.supabase.auth.getUser();
   }

@@ -16,6 +16,10 @@ html, body {
 .footer {
     background-color: #191C1F;
     color: white;
-    padding: 20px 0;
-    text-align: center;
+    height: 5rem;
+}
+
+.footer-logo {
+    max-height: 3rem;
+    width: auto;
 }

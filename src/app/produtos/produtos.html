@@ -1,59 +1,42 @@
 <div class="container-fluid">
-    <div class="row justify-content-center align-items-center text-center">
-        <div class="col-10">
+  <div class="row justify-content-center align-items-center text-center">
+    <div class="col-10">
+      <div class="titulo-produtos">Armações mais vendidas</div>
 
-            <div class="titulo-produtos">Armações mais vendidas</div>
-
-            <div class="row justify-content-between align-items-center text-center produtos">
-                <!-- produto 1 -->
-                <div class="col-3 card" style="width: 18rem;">
-                    <div class="col-8 desconto">
-                        10% de Desconto no Pix
-                    </div>
-                    <img src="images/produto/oculos1.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="titulo">Ana Hickmann NINA 4</p>
-                        <p class="preco">R$559,90</p>
-                    </div>
+      <div class="row justify-content-between align-items-center text-center produtos">
+        @if (produtos().length > 0) {
+          @for (produto of produtos(); track produto.id) {
+            <div class="col-3 card" [routerLink]="['/produto', produto.id]" style="width: 18rem;">
+              @if (produto.preco_pix && produto.preco_pix < produto.preco) {
+                <div class="col-8 desconto">
+                  {{ ((1 - (produto.preco_pix / produto.preco)) * 100) | number:'1.0-0' }}% de Desconto no Pix
                 </div>
+              }
 
-                <!-- produto 2 -->
-                <div class="col-3 card" style="width: 18rem;">
-                    <div class="col-8 desconto">
-                        10% de Desconto no Pix
-                    </div>
-                    <img src="images/produto/oculos1.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="titulo">Ana Hickmann NINA 4</p>
-                        <p class="preco">R$559,90</p>
-                    </div>
-                </div>
+                <img 
+                    [src]="produto.imagens_produto?.[0]?.url || 'assets/mock/produto.png'" 
+                    alt="{{ produto.nome }}"
+                    class="img-fluid"
+                />
 
-                <!-- produto 3 -->
-                <div class="col-3 card" style="width: 18rem;">
-                    <div class="col-8 desconto">
-                        10% de Desconto no Pix
-                    </div>
-                    <img src="images/produto/oculos1.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="titulo">Ana Hickmann NINA 4</p>
-                        <p class="preco">R$559,90</p>
-                    </div>
-                </div>
-
-                <!-- produto 4 -->
-                <div class="col-3 card" style="width: 18rem;">
-                    <div class="col-8 desconto">
-                        10% de Desconto no Pix
-                    </div>
-                    <img src="images/produto/oculos1.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="titulo">Ana Hickmann NINA 4</p>
-                        <p class="preco">R$559,90</p>
-                    </div>
-                </div>
+              <div class="card-body">
+                <p class="titulo">{{ produto.nome }}</p>
+                <p class="preco">R$ {{ produto.preco | number:'1.2-2' }}</p>
+                @if (produto.preco_pix) {
+                  <p class="pix">R$ {{ produto.preco_pix | number:'1.2-2' }} no Pix</p>
+                }
+                @if (produto.descricao) {
+                  <p class="descricao"> {{ produto.descricao }}</p>
+                }
+              </div>
             </div>
-            
-        </div>
+          }
+        } @else {
+          <div class="col">
+            <p>Nenhum produto disponível no momento.</p>
+          </div>
+        }
+      </div>
     </div>
+  </div>
 </div>

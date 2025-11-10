@@ -10,7 +10,7 @@ import { Produtos } from '../produtos/produtos';
   standalone: true,
   imports: [MenuSuperior, Footer, Slider, InfoOfertas, Produtos],
   templateUrl: './home.html',
-  styleUrl: './home.css',
+  styleUrls: ['./home.css'],
 })
 export class Home {
 
