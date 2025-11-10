@@ -6,6 +6,8 @@ import { RecuperarSenha } from './recuperar-senha/recuperar-senha';
 import { RegisterComponent } from './registrar/registrar';
 import { InfoProduto } from './produto-detalhe/produto-detalhe';
 import { VendaComponent } from './venda/venda';
+import { EspessuraLente } from './espessura-lente/espessura-lente';
+import { TipoLente } from './tipo-lente/tipo-lente';
 
 export const routes: Routes = [
     { path: '', component: Home },
@@ -15,4 +17,6 @@ export const routes: Routes = [
     { path: 'registrar', component: RegisterComponent },
     { path: 'produto/:id', component: InfoProduto },
     { path: 'venda', component: VendaComponent },
+    { path: 'espessura-lente', component: EspessuraLente },
+    { path: 'tipo-lente/:id', component: TipoLente },
 ];

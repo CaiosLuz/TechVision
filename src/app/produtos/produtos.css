@@ -26,7 +26,10 @@
 }
 
 .card {
-    border: 1px solid #E4E7E9
+    border: 1px solid #E4E7E9;
+    height: 470px;
+    object-fit: contain;
+    width: 100%;
 }
 
 .desconto {

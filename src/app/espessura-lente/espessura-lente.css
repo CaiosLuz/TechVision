@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Irish+Grover&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.lentes {
+    gap: 2%;
+}
+
+.titulo {
+    font-family: "Public Sans", system-ui;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 2%;
+}
+
+.infos {
+    font-family: "Public Sans", system-ui;
+    font-size: 15px;
+    color: #3E4A52;
+}
+
+.barra-horizontal {
+    width: 100%;
+    height: 1px;
+    background-color: #dfdfdf;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.barra-vertical {
+    height: 45vh;
+    width: 2px;
+    border-left: 1px solid #dfdfdf; 
+}

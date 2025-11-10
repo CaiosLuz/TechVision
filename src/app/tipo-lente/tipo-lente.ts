@@ -1,28 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProdutoService } from '../services/produto';
 import { MenuSuperior } from '../menu-superior/menu-superior';
 import { Footer } from '../footer/footer';
+import { ProdutoService } from '../services/produto';
+import { ConfiguracaoOculos } from '../services/configuracao-oculos';
 
 @Component({
-  selector: 'app-produto',
+  selector: 'app-tipo-lente',
   standalone: true,
-  imports: [CommonModule, FormsModule, MenuSuperior, Footer],
-  templateUrl: './produto-detalhe.html',
-  styleUrls: ['./produto-detalhe.css'],
+  imports: [CommonModule, MenuSuperior, Footer],
+  templateUrl: './tipo-lente.html',
+  styleUrls: ['./tipo-lente.css'],
 })
-export class InfoProduto implements OnInit {
+export class TipoLente implements OnInit {
   produto: any;
   imagens: string[] = [];
   imagemPrincipal = '';
-  quantidade = 1;
 
   constructor(
-    private produtoService: ProdutoService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private produtoService: ProdutoService,
+    private configOculos: ConfiguracaoOculos
   ) {}
 
   async ngOnInit() {
@@ -32,16 +32,8 @@ export class InfoProduto implements OnInit {
     this.imagemPrincipal = this.imagens[0] || '';
   }
 
-  alterarQuantidade(valor: number) {
-    this.quantidade = Math.max(1, this.quantidade + valor);
-  }
-
-  adicionarAoCarrinho() {
-    alert(`Adicionado ${this.quantidade}x ${this.produto.nome} ao carrinho 🛒`);
-  }
-
-  comprarAgora() {
+  escolherLente(tipo: string) {
+    this.configOculos.setProduto(this.produto);
     this.router.navigate(['/selecionar-lente', this.produto.id]);
-    this.router.navigate(['/tipo-lente', this.produto.id]);
   }
 }

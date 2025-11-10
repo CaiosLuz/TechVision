@@ -1,0 +1,62 @@
+<app-menu-superior></app-menu-superior>
+
+<div class="container-fluid">
+  <div class="row justify-content-center align-items-start">
+    <div class="col-10">
+      <div class="text-center m-4">
+        <p>Selecione a lente</p>
+        <img src="images/tipo-lente/processo1.png" style="width: 20rem;">
+      </div>
+
+      <div class="row justify-content-center align-items-start">
+        <div class="col-6">
+          <div
+            class="card d-flex flex-row align-items-center mb-3 p-3 selecao"
+            style="cursor: pointer; max-width: 35rem;"
+            (click)="escolherLente('Grau')"
+          >
+            <div class="me-3" style="flex: 0 0 30%;">
+              <img src="images/tipo-lente/armacao.png" alt="Lente Grau" class="img-fluid rounded">
+            </div>
+            <div class="flex-grow-1 text-start">
+              <p class="tipo mb-0 fw-bold">Grau</p>
+              <p class="info-tipo mb-0 text-muted">Para perto ou longe</p>
+            </div>
+          </div>
+
+          <div
+            class="card d-flex flex-row align-items-center mb-3 p-3 selecao"
+            style="cursor: pointer; max-width: 35rem;"
+            (click)="escolherLente('Multifocal')"
+          >
+            <div class="me-3" style="flex: 0 0 30%;">
+              <img src="images/tipo-lente/multifocal.png" alt="Lente multifocal" class="img-fluid rounded">
+            </div>
+            <div class="flex-grow-1 text-start">
+              <p class="tipo mb-0 fw-bold">Multifocal</p>
+              <p class="info-tipo mb-0 text-muted">Lentes para Presbiopia</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-auto d-flex justify-content-center">
+          <div class="barra-vertical"></div>
+        </div>
+
+        <div class="col-3 text-center">
+            <img 
+                [src]="imagemPrincipal || 'images/tipo-lente/produto-secundario.png'" 
+                alt="{{ produto?.nome }}" 
+                class="img-fluid rounded mb-3"
+            >
+          <div class="mt-3">
+            <p class="tipo mb-0">{{ produto?.nome }}</p>
+            <p class="preco">R$ {{ produto?.preco }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
