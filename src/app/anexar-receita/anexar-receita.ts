@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { OcrService } from './../services/ocr';
 import { MenuSuperior } from '../menu-superior/menu-superior';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { ConfiguracaoOculos } from '../services/configuracao-oculos';
 
 @Component({
   selector: 'app-anexar-receita',
@@ -12,12 +13,12 @@ import { Router } from '@angular/router';
   templateUrl: './anexar-receita.html',
   styleUrls: ['./anexar-receita.css']
 })
-export class AnexarReceita {
+export class AnexarReceita implements OnInit{
   imagemSelecionada: File | null = null;
   resultado: any = null;
   carregando = false;
+  preencherManual = false;
 
-  // Variáveis OCR / manual
   esfericoOD: number | null = null;
   esfericoOE: number | null = null;
   cilindricoOD: number | null = null;
@@ -25,9 +26,19 @@ export class AnexarReceita {
   eixoOD: number | null = null;
   eixoOE: number | null = null;
 
-  preencherManual = false;
+  produto: any;
+  tipoLente: string = '';
+  espessura: string = '';
 
-  constructor(private ocr: OcrService, private router: Router) {}
+  constructor(private ocr: OcrService, private router: Router, private configOculos: ConfiguracaoOculos) {}
+
+  ngOnInit() {
+    const config = this.configOculos.getConfiguracao();
+
+    this.produto = config.produto;
+    this.tipoLente = config.tipoLente ?? '';
+    this.espessura = config.espessura ?? '';
+  }
 
   onFileSelected(event: any) {
     this.imagemSelecionada = event.target.files[0];
@@ -41,7 +52,6 @@ export class AnexarReceita {
       next: res => {
         this.resultado = res.resultado;
 
-        // Preenche variáveis para a tabela
         if (res.resultado.OD) {
           this.esfericoOD = res.resultado.OD.esferico;
           this.cilindricoOD = res.resultado.OD.cilindrico;
@@ -53,6 +63,7 @@ export class AnexarReceita {
           this.eixoOE = res.resultado.OE.eixo;
         }
 
+        this.salvarReceita();
         this.carregando = false;
       },
       error: err => {
@@ -60,6 +71,17 @@ export class AnexarReceita {
         this.carregando = false;
       }
     });
+  }
+
+  salvarReceita() {
+    this.configOculos.setReceita({
+      esfericoOD: this.esfericoOD,
+      esfericoOE: this.esfericoOE,
+      cilindricoOD: this.cilindricoOD,
+      cilindricoOE: this.cilindricoOE,
+      eixoOD: this.eixoOD,
+      eixoOE: this.eixoOE
+    })
   }
 
   salvarManual() {
@@ -73,6 +95,7 @@ export class AnexarReceita {
     });
     alert('Dados salvos manualmente!');
   }
+  
   pularEtapa() {
     this.router.navigate(['/venda']);
   }

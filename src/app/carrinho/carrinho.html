@@ -1,0 +1,104 @@
+<app-menu-superior></app-menu-superior>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+
+    <!-- Coluna principal - produto e prescrição -->
+    <div class="col-md-8">
+      <div class="card p-4 mb-4">
+        <h4 class="fw-bold mb-4">Carrinho de compras</h4>
+
+        <!-- Produto -->
+        <div class="d-flex align-items-center border-bottom pb-3 mb-3">
+          <img src="images/oculos.png" alt="Óculos" class="img-produto me-3">
+          <div class="flex-grow-1">
+            <p class="fw-semibold mb-1">{{ produto?.nome || 'Atitude AT1718M - Preto Fosco' }}</p>
+            <p class="text-muted small mb-0">Qtd: 1</p>
+          </div>
+          <p class="fw-bold fs-5 mb-0">R$ {{ produto?.preco || 321.30 }}</p>
+        </div>
+
+        <!-- Seleções -->
+        <div class="mb-3">
+          <p><strong>Tipo:</strong> {{ tipoLente || 'Grau' }}</p>
+          <p><strong>Espessura:</strong> {{ espessura || 'Fina' }}</p>
+        </div>
+
+        <!-- Prescrição -->
+        <h6 class="fw-bold mb-2">Prescrição Médica:</h6>
+
+        <table class="table table-bordered text-center align-middle">
+          <thead class="table-light">
+            <tr>
+              <th></th>
+              <th>Esférico</th>
+              <th>Cilíndrico</th>
+              <th>Eixo</th>
+              <th>DP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-secondary text-start">
+              <th colspan="5">Longe</th>
+            </tr>
+            <tr>
+              <td>OD</td>
+              <td>{{ receita?.longe?.OD?.esferico || '-' }}</td>
+              <td>{{ receita?.longe?.OD?.cilindrico || '-' }}</td>
+              <td>{{ receita?.longe?.OD?.eixo || '-' }}</td>
+              <td>{{ receita?.longe?.OD?.dp || '-' }}</td>
+            </tr>
+            <tr>
+              <td>OE</td>
+              <td>{{ receita?.longe?.OE?.esferico || '-' }}</td>
+              <td>{{ receita?.longe?.OE?.cilindrico || '-' }}</td>
+              <td>{{ receita?.longe?.OE?.eixo || '-' }}</td>
+              <td>{{ receita?.longe?.OE?.dp || '-' }}</td>
+            </tr>
+
+            <tr class="table-secondary text-start mt-4">
+              <th colspan="5">Perto</th>
+            </tr>
+            <tr>
+              <td>OD</td>
+              <td>{{ receita?.perto?.OD?.esferico || '-' }}</td>
+              <td>{{ receita?.perto?.OD?.cilindrico || '-' }}</td>
+              <td>{{ receita?.perto?.OD?.eixo || '-' }}</td>
+              <td>{{ receita?.perto?.OD?.dp || '-' }}</td>
+            </tr>
+            <tr>
+              <td>OE</td>
+              <td>{{ receita?.perto?.OE?.esferico || '-' }}</td>
+              <td>{{ receita?.perto?.OE?.cilindrico || '-' }}</td>
+              <td>{{ receita?.perto?.OE?.eixo || '-' }}</td>
+              <td>{{ receita?.perto?.OE?.dp || '-' }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Coluna direita - resumo -->
+    <div class="col-md-3">
+      <div class="card p-4">
+        <h5 class="fw-bold">Resumo da Compra</h5>
+        <div class="d-flex justify-content-between my-2">
+          <span>Subtotal</span>
+          <span>R$ {{ produto?.preco || 321.30 }}</span>
+        </div>
+        <div class="d-flex justify-content-between mb-3">
+          <span>Frete</span>
+          <span>Grátis</span>
+        </div>
+        <div class="d-flex justify-content-between border-top pt-2">
+          <span class="fw-bold">Total</span>
+          <span class="fw-bold fs-5 text-dark">R$ {{ produto?.preco || 321.30 }}</span>
+        </div>
+        <button class="btn btn-dark w-100 mt-3" (click)="finalizarCompra()">Pagamento →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<app-footer></app-footer>

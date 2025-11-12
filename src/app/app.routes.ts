@@ -8,6 +8,7 @@ import { InfoProduto } from './produto-detalhe/produto-detalhe';
 import { VendaComponent } from './venda/venda';
 import { EspessuraLente } from './espessura-lente/espessura-lente';
 import { TipoLente } from './tipo-lente/tipo-lente';
+import { Carrinho } from './carrinho/carrinho';
 
 export const routes: Routes = [
     { path: '', component: Home },
@@ -17,6 +18,8 @@ export const routes: Routes = [
     { path: 'registrar', component: RegisterComponent },
     { path: 'produto/:id', component: InfoProduto },
     { path: 'venda', component: VendaComponent },
-    { path: 'espessura-lente', component: EspessuraLente },
+    { path: 'espessura-lente/:id', component: EspessuraLente },
     { path: 'tipo-lente/:id', component: TipoLente },
+    { path: 'anexar-receita/:id', component: AnexarReceita },
+    { path: 'carrinho', component: Carrinho },
 ];

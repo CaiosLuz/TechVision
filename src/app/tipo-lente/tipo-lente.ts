@@ -34,6 +34,7 @@ export class TipoLente implements OnInit {
 
   escolherLente(tipo: string) {
     this.configOculos.setProduto(this.produto);
-    this.router.navigate(['/selecionar-lente', this.produto.id]);
+    this.configOculos.setTipoLente(tipo);
+    this.router.navigate(['/espessura-lente', this.produto.id]);
   }
 }

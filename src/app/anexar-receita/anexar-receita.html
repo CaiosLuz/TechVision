@@ -104,20 +104,20 @@
     </div>
 
     <!-- Barra vertical -->
-    <div class="col-auto">
+    <div class="col-auto mt-4">
       <div class="barra-vertical"></div>
     </div>
 
     <!-- Coluna direita: informações do óculos -->
-    <div class="col-3">
-      <img src="images/detalhe-produto/produto-secundario.png" alt="" class="img-fluid mb-3">
+    <div class="col-3 mt-4">
+      <img [src]="produto?.imagens_produto?.[0]?.url || 'images/detalhe-produto/produto-secundario.png'" alt="" class="img-fluid mb-3">
       <div class="row">
-        <p class="tipo mb-0">Atitude ATM1718M</p>
-        <p class="preco">R$321,30</p>
+        <p class="tipo mb-0">{{ produto?.nome }}</p>
+        <p class="preco">R$ {{ produto?.preco }}</p>
         <p class="titulo">Selecionados:</p>
         <div class="barra-horizontal mb-2"></div>
-        <p class="infos"><strong>Lente:</strong> Grau</p>
-        <p class="infos"><strong>Espessura:</strong> Fina</p>
+        <p class="infos"><strong>Lente:</strong> {{ tipoLente }}</p>
+        <p class="infos"><strong>Espessura:</strong> {{ espessura }}</p>
       </div>
     </div>
 

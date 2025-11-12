@@ -1,0 +1,20 @@
+.img-produto {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.table th[colspan="5"] {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.btn-dark {
+  border-radius: 8px;
+  font-weight: 500;
+}

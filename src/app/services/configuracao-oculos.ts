@@ -4,6 +4,14 @@ export interface IConfiguracaoOculos {
   produto?: any;
   tipoLente?: string;
   espessura?: string;
+  receita?: {
+    esfericoOD?: number | null;
+    esfericoOE?: number | null;
+    cilindricoOD?: number | null;
+    cilindricoOE?: number | null;
+    eixoOD?: number | null;
+    eixoOE?: number | null;
+  };
 }
 
 @Injectable({
@@ -15,6 +23,7 @@ export class ConfiguracaoOculos {
     produto: undefined,
     tipoLente: undefined,
     espessura: undefined,
+    receita: undefined
   };
 
   setProduto(produto: any) {
@@ -29,11 +38,15 @@ export class ConfiguracaoOculos {
     this.configuracao.espessura = espessura;
   }
 
+  setReceita(receita: IConfiguracaoOculos['receita']) {
+    this.configuracao.receita = receita;
+  }
+
   getConfiguracao() {
     return this.configuracao;
   }
 
   reset() {
-    this.configuracao = { produto: undefined, tipoLente: undefined, espessura: undefined };
+    this.configuracao = { produto: undefined, tipoLente: undefined, espessura: undefined, receita: undefined };
   }
 }
