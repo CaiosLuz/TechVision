@@ -1,4 +1,4 @@
-# 🕶️ Marketplace de Óculos com Leitor de Receitas Oftalmológicas
+# 🕶️ Marketplace TechVision com Leitor de Receitas Oftalmológicas
 
 Este projeto é um **Marketplace de Óculos** desenvolvido com **Angular**, integrado a um sistema em **Python (FastAPI + Tesseract OCR)** para leitura de receitas oftalmológicas.  
 O sistema permite **visualizar produtos, consultar detalhes e enviar imagens de receitas** para leitura automática dos graus oftalmológicos.
