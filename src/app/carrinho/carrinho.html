@@ -10,7 +10,12 @@
 
         <!-- Produto -->
         <div class="d-flex align-items-center border-bottom pb-3 mb-3">
-          <img src="images/oculos.png" alt="Óculos" class="img-produto me-3">
+          <img 
+            *ngIf="produto?.imagens_produto?.length"
+            [src]="produto.imagens_produto[0].url"
+            class="img-fluid rounded"
+            style="width: 120px; height: auto;"
+            alt="Imagem do produto">
           <div class="flex-grow-1">
             <p class="fw-semibold mb-1">{{ produto.nome || 'Atitude AT1718M - Preto Fosco' }}</p>
             <p class="text-muted small mb-0">Qtd: 1</p>
@@ -76,5 +81,3 @@
 
   </div>
 </div>
-
-<app-footer></app-footer>

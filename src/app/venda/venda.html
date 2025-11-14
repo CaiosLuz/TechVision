@@ -5,84 +5,109 @@
 
   <div *ngIf="carrinho.length > 0; else vazio">
     <div class="row">
-      <!-- Coluna esquerda: produto e detalhes -->
+
+      <!-- COLUNA ESQUERDA -->
       <div class="col-md-6">
+
         <div *ngFor="let item of carrinho; let i = index" class="mb-4">
           <div class="card p-3">
+
+            <!-- Imagem -->
             <div class="text-center mb-3">
-              <img [src]="item.imagens_produto[0]?.url || 'images/default.png'" 
-                   class="img-fluid rounded" alt="{{ item.nome }}">
+              <img [src]="item.imagens_produto[0]?.url || 'images/default.png'"
+                   class="img-fluid rounded"
+                   alt="{{ item.nome }}">
             </div>
 
             <h5>{{ item.nome }}</h5>
 
-            <!-- Avaliação -->
             <p>⭐⭐⭐⭐⭐ ({{ item.avaliacao || 0 }} avaliações)</p>
 
-            <!-- Detalhes -->
             <div class="row">
-              <div class="col-6">Formato: {{ item.formato || '' }}</div>
-              <div class="col-6">Gênero: {{ item.genero || 'Unisex' }}</div>
-            </div>
-            <div class="row">
-              <div class="col-6">Ponte: {{ item.ponte || 0 }}</div>
-              <div class="col-6">Largura da Lente: {{ item.largura_lente || 0 }}</div>
+              <div class="col-6">Formato: {{ item.formato }}</div>
+              <div class="col-6">Gênero: {{ item.genero }}</div>
             </div>
 
-            <div class="row mt-2">
-              <div class="col">
-                Cores: {{ item?.cores?.join(' ') || 'Sem cores' }}
-              </div>
+            <div class="row">
+              <div class="col-6">Ponte: {{ item.ponte }}</div>
+              <div class="col-6">Largura da Lente: {{ item.largura_lente }}</div>
             </div>
+
+            <div class="mt-2">
+              Cores: {{ item.cores?.join(', ') || 'Sem cores' }}
+            </div>
+
+            <hr>
+
+            <!-- Tipo e Espessura -->
+            <p><strong>Tipo de Lente:</strong> {{ item.tipoLente }}</p>
+            <p><strong>Espessura:</strong> {{ item.espessura }}</p>
+
+            <!-- Prescrição -->
+            <h6 class="fw-bold mt-3">Prescrição:</h6>
+
+            <p><strong>OD:</strong>
+              {{ item.receita?.esfericoOD || '-' }} /
+              {{ item.receita?.cilindricoOD || '-' }} /
+              {{ item.receita?.eixoOD || '-' }}
+            </p>
+
+            <p><strong>OE:</strong>
+              {{ item.receita?.esfericoOE || '-' }} /
+              {{ item.receita?.cilindricoOE || '-' }} /
+              {{ item.receita?.eixoOE || '-' }}
+            </p>
 
             <!-- Preço -->
-            <div class="row mt-2">
-              <div class="col-6">
-                R$ {{ item.preco | number:'1.2-2' }}
-              </div>
-              <div class="col-6">
-                Pix: R$ {{ item.preco_pix | number:'1.2-2' }}
-              </div>
+            <div class="row mt-3">
+              <div class="col-6">R$ {{ item.preco | number:'1.2-2' }}</div>
+              <div class="col-6">Pix: R$ {{ item.preco_pix | number:'1.2-2' }}</div>
             </div>
 
             <!-- Quantidade -->
-            <div class="d-flex align-items-center mt-3 mb-2">
+            <div class="d-flex align-items-center mt-3">
               <button class="btn btn-sm btn-outline-secondary" (click)="decrementarQuantidade(i)">-</button>
               <span class="mx-2">{{ item.quantidade }}</span>
               <button class="btn btn-sm btn-outline-secondary" (click)="incrementarQuantidade(i)">+</button>
             </div>
 
-            <button class="btn btn-primary btn-sm mt-2" (click)="continuarComprando()">Adicionar mais produtos</button>
+            <button class="btn btn-primary btn-sm mt-3" (click)="continuarComprando()">Adicionar mais produtos</button>
           </div>
         </div>
+
       </div>
 
-      <!-- Coluna direita: pagamento e ações -->
+      <!-- COLUNA DIREITA -->
       <div class="col-md-6">
         <div class="card p-3">
+
           <h5>Resumo do Pedido</h5>
-          <div class="mb-3">
-            <strong>Total:</strong> R$ {{ total() | number:'1.2-2' }}
+
+          <p><strong>Total:</strong> R$ {{ total() | number:'1.2-2' }}</p>
+
+          <hr>
+
+          <p><strong>Escolha o meio de pagamento:</strong></p>
+
+          <div class="form-check" *ngFor="let meio of meiosPagamento">
+            <input type="checkbox"
+                   class="form-check-input"
+                   [value]="meio"
+                   (change)="togglePagamento(meio, $event)"
+                   [checked]="pagamentoSelecionado.includes(meio)">
+            <label class="form-check-label">{{ meio }}</label>
           </div>
 
-          <!-- Seleção de meios de pagamento -->
-          <div class="mb-3">
-            <p><strong>Escolha o meio de pagamento:</strong></p>
-            <div class="form-check" *ngFor="let meio of meiosPagamento">
-              <input class="form-check-input" type="checkbox" [value]="meio" (change)="togglePagamento(meio, $event)"
-                     [checked]="pagamentoSelecionado.includes(meio)">
-              <label class="form-check-label">{{ meio }}</label>
-            </div>
-            <small class="text-muted">Você pode selecionar mais de um para mesclar o pagamento</small>
-          </div>
+          <small class="text-muted">Você pode selecionar mais de um meio.</small>
 
-          <!-- Botões de ação -->
-          <div class="d-flex flex-column gap-2">
+          <div class="d-flex flex-column gap-2 mt-3">
             <button class="btn btn-primary" (click)="finalizarDepois()">Finalizar depois</button>
-            <button class="btn btn-success" (click)="finalizarPagamento()">Finalizar com pagamento</button>
+            <button class="btn btn-success" (click)="finalizarPagamento()">Finalizar pagamento</button>
           </div>
+
         </div>
       </div>
+
     </div>
   </div>
 

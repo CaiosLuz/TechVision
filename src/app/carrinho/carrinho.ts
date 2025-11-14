@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { MenuSuperior } from '../menu-superior/menu-superior';
 import { Footer } from '../footer/footer';
+import { ConfiguracaoOculos } from '../services/configuracao-oculos';
 
 @Component({
   selector: 'app-carrinho',
@@ -12,28 +13,24 @@ import { Footer } from '../footer/footer';
   styleUrls: ['./carrinho.css']
 })
 export class Carrinho {
-  produto = {
-    nome: 'Atitude AT1718M - Preto Fosco',
-    preco: 321.30
-  };
 
-  tipoLente = 'Grau';
-  espessura = 'Fina';
+  produto: any;
+  tipoLente?: string;
+  espessura?: string;
+  receita: any = null;
 
-  receita = {
-    longe: {
-      OD: { esferico: -2.00, cilindrico: 0.00, eixo: '', dp: '' },
-      OE: { esferico: -2.00, cilindrico: 0.00, eixo: '', dp: '' }
-    },
-    perto: {
-      OD: { esferico: +1.00, cilindrico: 0.00, eixo: '', dp: '' },
-      OE: { esferico: +1.00, cilindrico: 0.00, eixo: '', dp: '' }
-    }
-  };
+  constructor(private router: Router, private configOculos: ConfiguracaoOculos) {}
 
-  constructor(private router: Router) {}
+  ngOnInit() {
+    const config = this.configOculos.getConfiguracao();
+    console.log("CONFIG:", config);
+    this.produto = config.produto;
+    this.tipoLente = config.tipoLente;
+    this.espessura = config.espessura;
+    this.receita = config.receita; 
+  }
 
   finalizarCompra() {
-    this.router.navigate(['/pagamento']);
+    this.router.navigate(['/venda']);
   }
 }

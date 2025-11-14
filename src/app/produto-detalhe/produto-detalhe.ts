@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ProdutoService } from '../services/produto';
 import { MenuSuperior } from '../menu-superior/menu-superior';
 import { Footer } from '../footer/footer';
+import { ConfiguracaoOculos } from '../services/configuracao-oculos';
 
 @Component({
   selector: 'app-produto',
@@ -22,7 +23,8 @@ export class InfoProduto implements OnInit {
   constructor(
     private produtoService: ProdutoService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private configOculos: ConfiguracaoOculos
   ) {}
 
   async ngOnInit() {
@@ -41,7 +43,13 @@ export class InfoProduto implements OnInit {
   }
 
   comprarAgora() {
-    this.router.navigate(['/selecionar-lente', this.produto.id]);
-    this.router.navigate(['/tipo-lente', this.produto.id]);
+    const produtoCompleto = {
+    ...this.produto,
+    imagens: this.imagens,              // array de URLs
+    imagemPrincipal: this.imagemPrincipal // URL principal
+  };
+
+  this.configOculos.setProduto(produtoCompleto);
+  this.router.navigate(['/tipo-lente', this.produto.id]);
   }
 }
