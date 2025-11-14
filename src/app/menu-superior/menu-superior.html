@@ -3,7 +3,7 @@
     <!-- Menu nível 1 -->
     <div class="row justify-content-center align-items-center text-center py-2">
         <!-- Logo -->
-        <div class="col col-2">
+        <div class="col col-2" (click)="irHome()">
             <img src="images/menu-superior/Logo.png" alt="logo">
         </div>
         <!-- Campo de busca -->
@@ -28,11 +28,11 @@
     <!-- Menu nível 2 -->
     <div class="nivel_dois row justify-content-center align-items-center text-center">
         <div class="nivel_dois col-auto">
-            <select class="nivel_dois form-select" aria-label="Default select example">
-                <option selected><img src="images/armacao.png" alt="armação">Armações</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+            <select class="nivel_dois form-select"  aria-label="Default select example">
+                <option selected ><img src="images/armacao.png" alt="armação">Armações</option>
+                <option value="1">Armação Redonda</option>
+                <option value="2">Armação Quadrada</option>
+                <option value="3">Armação acetato</option>
             </select>
         </div>
         <div class="nivel_dois col-auto">

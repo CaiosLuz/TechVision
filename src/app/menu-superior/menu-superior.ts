@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-superior',
@@ -8,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class MenuSuperior {
 
+  constructor(private router: Router) {}
+  irHome() {
+    this.router.navigate(['/']);
+  }
 }
