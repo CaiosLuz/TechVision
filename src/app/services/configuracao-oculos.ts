@@ -11,7 +11,7 @@ export interface IConfiguracaoOculos {
     cilindricoOE?: number | null;
     eixoOD?: number | null;
     eixoOE?: number | null;
-  };
+  } | null;
 }
 
 @Injectable({
@@ -38,8 +38,15 @@ export class ConfiguracaoOculos {
     this.configuracao.espessura = espessura;
   }
 
-  setReceita(receita: IConfiguracaoOculos['receita']) {
-    this.configuracao.receita = receita;
+  setReceita(receita: {
+    esfericoOD?: number | null;
+    esfericoOE?: number | null;
+    cilindricoOD?: number | null;
+    cilindricoOE?: number | null;
+    eixoOD?: number | null;
+    eixoOE?: number | null;
+  } | null) {
+    this.configuracao.receita = receita ;
   }
 
   getConfiguracao() {

@@ -97,6 +97,13 @@ export class AnexarReceita implements OnInit{
   }
   
   pularEtapa() {
+    this.preencherManual = false;
+    this.esfericoOD = null;
+    this.configOculos.setReceita(null);
     this.router.navigate(['/venda']);
+  }
+
+  irParaCarrinho() {
+    this.router.navigate(['/carrinho']);
   }
 }

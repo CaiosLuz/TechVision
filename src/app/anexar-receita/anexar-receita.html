@@ -18,7 +18,7 @@
         <button class="btn btn-outline-primary me-2" [class.active]="preencherManual" (click)="preencherManual=true">
           Preencher Manualmente
         </button>
-        <button class="btn btn-outline-primary" (click)="pularEtapa()" (click)="preencherManual=false; esfericoOD=null">
+        <button class="btn btn-outline-primary" (click)="pularEtapa()" esfericoOD="null">
             Pular etapa e escolher apenas a armação
         </button>
       </div>
@@ -118,6 +118,11 @@
         <div class="barra-horizontal mb-2"></div>
         <p class="infos"><strong>Lente:</strong> {{ tipoLente }}</p>
         <p class="infos"><strong>Espessura:</strong> {{ espessura }}</p>
+      </div>
+      <div class="text-center mt-3">
+        <button class="btn btn-dark" (click)="irParaCarrinho()" [disabled]="!esfericoOD && !esfericoOE">
+          Avançar →
+        </button>
       </div>
     </div>
 
