@@ -27,9 +27,17 @@
 
 .card {
     border: 1px solid #E4E7E9;
-    height: 470px;
+    height: 330px;
     object-fit: contain;
     width: 100%;
+    margin-bottom: 2%;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .desconto {
@@ -42,4 +50,13 @@
     color: #FFFFFF;
     border-radius: 4px;
     height: 26px;
+}
+
+.produto-img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  padding: 3%;
 }

@@ -156,12 +156,24 @@
         <div class="barra-horizontal mb-2"></div>
         <p class="infos"><strong>Lente:</strong> {{ tipoLente }}</p>
         <p class="infos"><strong>Espessura:</strong> {{ espessura }}</p>
+        <p class="infos"><strong>Tratamentos:</strong></p>
+        <div *ngIf="tratamentosSelecionados.length > 0; else nenhumTratamento">
+          <ul class="lista-tratamentos">
+            <li *ngFor="let t of tratamentosSelecionados">{{ t }}</li>
+          </ul>
+        </div>
+
+        <ng-template #nenhumTratamento>
+          <p class="infos text-muted">Nenhum tratamento selecionado</p>
+        </ng-template>
       </div>
-      <div class="text-center mt-3">
-        <button class="btn btn-dark" (click)="irParaCarrinho()" [disabled]="!esfericoOD && !esfericoOE">
-          Avançar →
-        </button>
-      </div>
+      <button 
+                    class="btn btn-primary mt-4 w-100"
+                    style="border-radius: 12px; font-size: 1.1rem; padding: .7rem;"
+                    (click)="irParaCarrinho()"
+                  [disabled]="!esfericoOD && !esfericoOE">
+                    Avançar →
+                </button>
     </div>
 
   </div>

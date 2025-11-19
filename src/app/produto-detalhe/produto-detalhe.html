@@ -14,9 +14,9 @@
           <div class="d-flex justify-content-center gap-2 mt-3 flex-wrap">
             @for (img of imagens; track img) {
               <img [src]="img"
-                   class="img-thumbnail"
-                   (click)="imagemPrincipal = img"
-                   style="width: 80px; height: 80px; object-fit: cover; cursor: pointer;">
+                  class="img-thumbnail"
+                  (click)="imagemPrincipal = img"
+                  style="width: 80px; height: 80px; object-fit: contain; cursor: pointer; background: #fff; padding: 5px;">
             }
           </div>
         </div>

@@ -9,35 +9,102 @@
       </div>
 
       <div class="row justify-content-center align-items-start">
-        <div class="col-6 mb-5">
-          <div
-            class="card d-flex flex-row align-items-center mb-3 p-3 selecao"
-            style="cursor: pointer; max-width: 35rem;"
-            (click)="escolherLente('Grau')"
-          >
-            <div class="me-3" style="flex: 0 0 30%;">
-              <img src="images/tipo-lente/armacao.png" alt="Lente Grau" class="img-fluid rounded">
+        <div class="col-6 mb-5 d-flex flex-column">
+          <div class="row">
+            <div class="col-6">
+              <div
+                class="card d-flex flex-row align-items-center mb-3 p-3 selecao"
+                [class.active]="tipoSelecionado === 'Grau'"
+                style="cursor: pointer; max-width: 35rem;"
+                (click)="selecionarTipo('Grau')"
+              >
+                <div class="me-3" style="flex: 0 0 30%;">
+                  <img src="images/tipo-lente/armacao.png" alt="Lente Grau" class="img-fluid rounded">
+                </div>
+                <div class="flex-grow-1 text-start">
+                  <p class="tipo mb-0 fw-bold">Grau</p>
+                  <p class="info-tipo mb-0 text-muted">Para perto ou longe</p>
+                </div>
+              </div>
             </div>
-            <div class="flex-grow-1 text-start">
-              <p class="tipo mb-0 fw-bold">Grau</p>
-              <p class="info-tipo mb-0 text-muted">Para perto ou longe</p>
+
+            <div class="col-6">
+              <div
+                class="card d-flex flex-row align-items-center mb-3 p-3 selecao"
+                [class.active]="tipoSelecionado === 'Multifocal'"
+                style="cursor: pointer; max-width: 35rem;"
+                (click)="selecionarTipo('Multifocal')"
+              >
+                <div class="me-3" style="flex: 0 0 30%;">
+                  <img src="images/tipo-lente/multifocal.png" alt="Lente multifocal" class="img-fluid rounded">
+                </div>
+                <div class="flex-grow-1 text-start">
+                  <p class="tipo mb-0 fw-bold">Multifocal</p>
+                  <p class="info-tipo mb-0 text-muted">Lentes para Presbiopia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <h5 class="mb-3">Selecione os tratamentos</h5>
+
+            <div class="row gy-3">
+
+              <!-- Anti-reflexo -->
+              <div class="col-6">
+                <label class="tratamento-card">
+                  <input 
+                    type="checkbox"
+                    [checked]="tratamentosSelecionados.includes('Anti-reflexo')"
+                    (change)="toggleTratamento('Anti-reflexo')"
+                  >
+                  <div class="tratamento-content">
+                    <div>
+                      <p class="titulo">Anti-reflexo</p>
+                      <p class="descricao">Melhora a nitidez e reduz reflexos</p>
+                    </div>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Anti-risco -->
+              <div class="col-6">
+                <label class="tratamento-card">
+                  <input 
+                    type="checkbox"
+                    [checked]="tratamentosSelecionados.includes('Anti-risco')"
+                    (change)="toggleTratamento('Anti-risco')"
+                  >
+                  <div class="tratamento-content">
+                    <div>
+                      <p class="titulo">Anti-risco</p>
+                      <p class="descricao">Protege a lente contra arranhões</p>
+                    </div>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Blue Light -->
+              <div class="col-6">
+                <label class="tratamento-card">
+                  <input 
+                    type="checkbox"
+                    [checked]="tratamentosSelecionados.includes('Blue Light')"
+                    (change)="toggleTratamento('Blue Light')"
+                  >
+                  <div class="tratamento-content">
+                    <div>
+                      <p class="titulo">Blue Light</p>
+                      <p class="descricao">Filtro de luz azul para telas digitais</p>
+                    </div>
+                  </div>
+                </label>
+              </div>
+  
+              </div>
             </div>
           </div>
 
-          <div
-            class="card d-flex flex-row align-items-center mb-3 p-3 selecao"
-            style="cursor: pointer; max-width: 35rem;"
-            (click)="escolherLente('Multifocal')"
-          >
-            <div class="me-3" style="flex: 0 0 30%;">
-              <img src="images/tipo-lente/multifocal.png" alt="Lente multifocal" class="img-fluid rounded">
-            </div>
-            <div class="flex-grow-1 text-start">
-              <p class="tipo mb-0 fw-bold">Multifocal</p>
-              <p class="info-tipo mb-0 text-muted">Lentes para Presbiopia</p>
-            </div>
-          </div>
-        </div>
 
         <div class="col-auto d-flex justify-content-center">
           <div class="barra-vertical"></div>
@@ -53,6 +120,13 @@
             <p class="tipo mb-0">{{ produto?.nome }}</p>
             <p class="preco">R$ {{ produto?.preco }}</p>
           </div>
+          <button 
+            class="btn btn-primary mt-4 w-100"
+            style="border-radius: 12px; font-size: 1.1rem; padding: .7rem;"
+            (click)="irParaEspessura()"
+            [disabled]="!tipoSelecionado">
+            Avançar →
+          </button>
         </div>
       </div>
     </div>

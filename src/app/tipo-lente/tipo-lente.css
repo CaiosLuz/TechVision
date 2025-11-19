@@ -54,3 +54,68 @@
     width: 2px;
     border-left: 1px solid #dfdfdf; 
 }
+
+.tratamento-card {
+  display: block;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tratamento-card input {
+  display: none;
+}
+
+.tratamento-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 14px 18px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  transition: 0.2s;
+  background: #fff;
+}
+
+.tratamento-card input:checked + .tratamento-content {
+  border-color: #007bff;
+  background: #e8f1ff;
+  transform: scale(1.02);
+}
+
+.tratamento-content .icon {
+  font-size: 1.6rem;
+}
+
+.tratamento-content .titulo {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.tratamento-content .descricao {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.selecao {
+  border: 2px solid #e0e0e0;
+  transition: 0.2s;
+}
+
+.selecao.active {
+  border: 2px solid #007bff;
+  background-color: #f0f8ff;
+  box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
+}
+
+.card.selecao {
+  min-height: 140px; /* ajuste conforme o visual */
+  display: flex;
+  align-items: center;
+}
+
+.card.selecao:hover {
+  border: 2px solid #007bff50;
+}

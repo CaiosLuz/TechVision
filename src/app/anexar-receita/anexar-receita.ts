@@ -18,6 +18,7 @@ export class AnexarReceita implements OnInit{
   resultado: any = null;
   carregando = false;
   preencherManual = false;
+  tratamentosSelecionados: string[] = [];
 
   esfericoOD: number | null = null;
   esfericoOE: number | null = null;
@@ -38,6 +39,7 @@ export class AnexarReceita implements OnInit{
     this.produto = config.produto;
     this.tipoLente = config.tipoLente ?? '';
     this.espessura = config.espessura ?? '';
+    this.tratamentosSelecionados = config.tratamentos ?? [];
   }
 
   onFileSelected(event: any) {

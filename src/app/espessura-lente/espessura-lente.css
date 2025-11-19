@@ -30,3 +30,30 @@
     width: 2px;
     border-left: 1px solid #dfdfdf; 
 }
+
+.lista-tratamentos {
+    padding-left: 1.2rem;
+    margin-top: 0.3rem;
+}
+
+.lista-tratamentos li {
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+    color: #444;
+}
+
+.card-espessura {
+  width: 12rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.card-espessura:hover {
+  border: 2px solid #007bff50;
+}
+
+.card-espessura.selecionado {
+  border: 3px solid #007bff;
+  transform: scale(1.02);
+}

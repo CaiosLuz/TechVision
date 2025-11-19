@@ -1,0 +1,59 @@
+.pagamento-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  width: 100%;
+  margin-top: 20px;
+}
+
+.titulo-pagamento {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.lista-pagamentos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item-pagamento {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  background: #fafafa;
+}
+
+.item-pagamento:hover {
+  background: #f0f0f0;
+}
+
+.checkbox-pagamento {
+  margin-right: 10px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.btn-finalizar {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #27b91a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-finalizar:hover {
+  background: #159631;
+}

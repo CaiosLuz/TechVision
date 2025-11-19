@@ -4,6 +4,7 @@ export interface IConfiguracaoOculos {
   produto?: any;
   tipoLente?: string;
   espessura?: string;
+  tratamentos?: string[]; 
   receita?: {
     esfericoOD?: number | null;
     esfericoOE?: number | null;
@@ -23,6 +24,7 @@ export class ConfiguracaoOculos {
     produto: undefined,
     tipoLente: undefined,
     espessura: undefined,
+    tratamentos: [], 
     receita: undefined
   };
 
@@ -49,11 +51,19 @@ export class ConfiguracaoOculos {
     this.configuracao.receita = receita ;
   }
 
+  setTratamentos(tratamentos: string[]) {
+    this.configuracao.tratamentos = tratamentos;
+  }
+
+  getTratamentos() {
+    return this.configuracao.tratamentos || [];
+  }
+
   getConfiguracao() {
     return this.configuracao;
   }
 
   reset() {
-    this.configuracao = { produto: undefined, tipoLente: undefined, espessura: undefined, receita: undefined };
+    this.configuracao = { produto: undefined, tipoLente: undefined, espessura: undefined, tratamentos: [], receita: undefined };
   }
 }

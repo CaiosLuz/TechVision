@@ -17,6 +17,8 @@ export class TipoLente implements OnInit {
   produto: any;
   imagens: string[] = [];
   imagemPrincipal = '';
+  tipoSelecionado: string = '';
+  tratamentosSelecionados: string[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -33,8 +35,38 @@ export class TipoLente implements OnInit {
   }
 
   escolherLente(tipo: string) {
+    this.tipoSelecionado = tipo;
     this.configOculos.setProduto(this.produto);
     this.configOculos.setTipoLente(tipo);
+  }
+
+  selecionarTipo(tipo: string) {
+    this.tipoSelecionado = tipo;
+    this.configOculos.setTipoLente(tipo);
+    this.configOculos.setProduto(this.produto)
+  }
+
+  toggleTratamento(nome: string) {
+    if (this.tratamentosSelecionados.includes(nome)) {
+      this.tratamentosSelecionados =
+        this.tratamentosSelecionados.filter(t => t !== nome);
+    } else {
+      this.tratamentosSelecionados.push(nome);
+    }
+
+    // salva no service
+    this.configOculos.setTratamentos(this.tratamentosSelecionados);
+
+    console.log('Tratamentos selecionados:', this.tratamentosSelecionados);
+  }
+
+  irParaEspessura() {
+    if (!this.tipoSelecionado) return;
+
+    this.configOculos.setTipoLente(this.tipoSelecionado);
+    this.configOculos.setTratamentos(this.tratamentosSelecionados);
+    this.configOculos.setProduto(this.produto);
+
     this.router.navigate(['/espessura-lente', this.produto.id]);
   }
 }

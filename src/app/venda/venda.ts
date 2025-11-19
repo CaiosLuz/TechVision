@@ -39,6 +39,7 @@ export class VendaComponent implements OnInit {
         tipoLente: config.tipoLente,
         espessura: config.espessura,
         receita: config.receita,
+        tratamentos: config.tratamentos,
         quantidade: 1,
       }
     ];
@@ -89,8 +90,7 @@ export class VendaComponent implements OnInit {
       return;
     }
 
-    alert(
-      'Pagamento finalizado via: ' + this.pagamentoSelecionado.join(', ')
-    );
+    alert('Pagamento finalizado via: ' + this.pagamentoSelecionado.join(', '));
   }
+  
 }

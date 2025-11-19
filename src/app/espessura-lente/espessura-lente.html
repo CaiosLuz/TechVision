@@ -10,18 +10,28 @@
         <div class="col-6 d-flex flex-column justify-content-center">
 
             <div class="row lentes">
-                <div class="card col-3 mb-4" style="width: 12rem;" (click)="selecionarEspessura('Normal')">
-                    <img src="images/espessura-lente/normal.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="titulo mb-0">Normal</p>
-                        <p class="infos mb-0">Miopia de 0 a -2 graus</p>
-                        <p class="infos mb-0">Hipermetropia de 0 a +2 graus</p>
-                        <p class="infos mb-0">Astigmatismo de 0 a -2 graus</p>
-                    </div>
+                <!-- CARD NORMAL -->
+                <div 
+                class="card card-espessura col-3 mb-4"
+                [class.selecionado]="espessuraSelecionada === 'Normal'"
+                (click)="selecionarEspessura('Normal')"
+                >
+                <img src="images/espessura-lente/normal.png" class="card-img-top">
+                <div class="card-body">
+                    <p class="titulo mb-0">Normal</p>
+                    <p class="infos mb-0">Miopia de 0 a -2 graus</p>
+                    <p class="infos mb-0">Hipermetropia de 0 a +2 graus</p>
+                    <p class="infos mb-0">Astigmatismo de 0 a -2 graus</p>
+                </div>
                 </div>
 
-                <div class="card col-3 mb-4" style="width: 12rem;" (click)="selecionarEspessura('Fina')">
-                    <img src="images/espessura-lente/fina.png" class="card-img-top" alt="...">
+                <!-- CARD FINA -->
+                <div 
+                class="card card-espessura col-3 mb-4"
+                [class.selecionado]="espessuraSelecionada === 'Fina'"
+                (click)="selecionarEspessura('Fina')"
+                >
+                    <img src="images/espessura-lente/fina.png" class="card-img-top">
                     <div class="card-body">
                         <p class="titulo mb-0">Fina</p>
                         <p class="infos mb-0">Miopia de 0 a -4 graus</p>
@@ -30,8 +40,13 @@
                     </div>
                 </div>
 
-                <div class="card col-3 mb-4" style="width: 12rem;" (click)="selecionarEspessura('Super fina')">
-                    <img src="images/espessura-lente/superfina.png" class="card-img-top" alt="...">
+                <!-- CARD SUPER FINA -->
+                <div 
+                class="card card-espessura col-3 mb-4"
+                [class.selecionado]="espessuraSelecionada === 'Super fina'"
+                (click)="selecionarEspessura('Super fina')"
+                >
+                    <img src="images/espessura-lente/superfina.png" class="card-img-top">
                     <div class="card-body">
                         <p class="titulo mb-0">Super Fina</p>
                         <p class="infos mb-0">Miopia de -4 a -9 graus</p>
@@ -59,6 +74,25 @@
                 <p class="titulo">Selecionados:</p>
                 <div class="barra-horizontal"></div>
                 <p class="infos"><strong>Lente:</strong> {{ tipoLente }}</p>
+                <p class="infos"><strong>Tratamentos:</strong></p>
+
+                <div *ngIf="tratamentosSelecionados.length > 0; else nenhumTratamento">
+                    <ul class="lista-tratamentos">
+                        <li *ngFor="let t of tratamentosSelecionados">{{ t }}</li>
+                    </ul>
+                </div>
+
+                <ng-template #nenhumTratamento>
+                    <p class="infos text-muted">Nenhum tratamento selecionado</p>
+                </ng-template>
+
+                <button 
+                    class="btn btn-primary mt-4 w-100"
+                    style="border-radius: 12px; font-size: 1.1rem; padding: .7rem;"
+                    (click)="irParaReceita()"
+                    [disabled]="!espessuraSelecionada">
+                    Avançar →
+                </button>
             </div>
         </div>
         

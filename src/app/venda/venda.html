@@ -43,6 +43,21 @@
             <p><strong>Tipo de Lente:</strong> {{ item.tipoLente }}</p>
             <p><strong>Espessura:</strong> {{ item.espessura }}</p>
 
+            <!-- Tratamentos -->
+            <div class="mt-2">
+              <h6 class="fw-bold">Tratamentos:</h6>
+
+              <p *ngIf="item.tratamentos?.length === 0">
+                Nenhum tratamento selecionado
+              </p>
+
+              <ul *ngIf="item.tratamentos?.length > 0">
+                <li *ngFor="let t of item.tratamentos">
+                  {{ t.nome || t }}  <!-- suporta objeto ou string -->
+                </li>
+              </ul>
+            </div>
+
             <!-- Prescrição -->
             <h6 class="fw-bold mt-3">Prescrição:</h6>
 
@@ -89,20 +104,31 @@
 
           <p><strong>Escolha o meio de pagamento:</strong></p>
 
-          <div class="form-check" *ngFor="let meio of meiosPagamento">
-            <input type="checkbox"
-                   class="form-check-input"
-                   [value]="meio"
-                   (change)="togglePagamento(meio, $event)"
-                   [checked]="pagamentoSelecionado.includes(meio)">
-            <label class="form-check-label">{{ meio }}</label>
-          </div>
-
-          <small class="text-muted">Você pode selecionar mais de um meio.</small>
-
           <div class="d-flex flex-column gap-2 mt-3">
-            <button class="btn btn-primary" (click)="finalizarDepois()">Finalizar depois</button>
-            <button class="btn btn-success" (click)="finalizarPagamento()">Finalizar pagamento</button>
+            <div class="pagamento-container">
+              <h3 class="titulo-pagamento">Meios de Pagamento</h3>
+
+              <div class="lista-pagamentos">
+                <label class="item-pagamento" *ngFor="let meio of meiosPagamento">
+                  <input 
+                    type="checkbox"
+                    class="checkbox-pagamento"
+                    [checked]="pagamentoSelecionado.includes(meio)"
+                    (change)="togglePagamento(meio, $event)"
+                  />
+                  <span>{{ meio }}</span>
+                </label>
+              </div>
+
+            </div>
+
+            <button class="btn btn-success w-100" (click)="finalizarPagamento()">
+              Finalizar Pagamento
+            </button>
+
+            <button class="btn btn-primary mt-3" (click)="finalizarDepois()">
+              Finalizar depois
+            </button>
           </div>
 
         </div>
