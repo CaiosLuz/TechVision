@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_dark">#3E4A52</color>
+    <color name="background_gray">#F5F5F5</color>
+    <color name="accent_yellow">#F2CB6C</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_gray">#555555</color>
+    <color name="discount_tag">#2C3E50</color>
+</resources>

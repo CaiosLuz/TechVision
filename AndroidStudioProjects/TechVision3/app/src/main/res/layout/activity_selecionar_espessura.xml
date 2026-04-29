@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <include
+        android:id="@+id/includeTopBar"
+        layout="@layout/top_bar_padrao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/includeTopBar"
+        app:layout_constraintBottom_toTopOf="@id/includeBottomMenu">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecione a espessura"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:textColor="#333"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
+                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@android:drawable/ic_menu_gallery" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Normal" android:layout_marginStart="15dp" android:textStyle="bold" android:textColor="#333"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardFina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
+                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@android:drawable/ic_menu_gallery" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fina" android:layout_marginStart="15dp" android:textStyle="bold" android:textColor="#333"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardSuperFina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="24dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
+                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@android:drawable/ic_menu_gallery" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Super Fina" android:layout_marginStart="15dp" android:textStyle="bold" android:textColor="#333"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnProximaEtapa2"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:backgroundTint="#304FFE"
+                android:text="PRÓXIMA ETAPA"
+                android:textColor="#FFF"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/includeBottomMenu"
+        layout="@layout/bottom_menu_padrao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
