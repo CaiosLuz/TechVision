@@ -2,23 +2,51 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_anexar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D3D3D3">
+    android:background="#F5F5F5">
 
-    <include
-        android:id="@+id/includeTopBar"
-        layout="@layout/top_bar_padrao"
+    <LinearLayout
+        android:id="@+id/topBarReceita"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="50dp"
+        android:background="#3E4A52"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TechVision"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="US"
+            android:textColor="#3E4A52"
+            android:textStyle="bold"
+            android:background="@drawable/circle_bg"
+            android:backgroundTint="#D1D1D1"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
         android:padding="20dp"
-        app:layout_constraintTop_toBottomOf="@id/includeTopBar"
+        app:layout_constraintTop_toBottomOf="@id/topBarReceita"
         app:layout_constraintBottom_toTopOf="@id/btnProximaEtapa3">
 
         <TextView
@@ -37,17 +65,18 @@
             android:gravity="center"
             android:orientation="horizontal"
             android:layout_marginVertical="20dp">
-            <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="1" android:background="@drawable/circle_bg" android:gravity="center" android:textSize="12sp"/>
+            <TextView android:layout_width="30dp" android:layout_height="30dp" android:text="1" android:background="@drawable/circle_bg" android:backgroundTint="#FFF" android:gravity="center" android:textColor="#333" android:textSize="12sp"/>
             <View android:layout_width="60dp" android:layout_height="2dp" android:background="#333" android:layout_marginHorizontal="5dp" />
-            <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="2" android:background="@drawable/circle_bg" android:gravity="center" android:textSize="12sp"/>
+            <TextView android:layout_width="30dp" android:layout_height="30dp" android:text="2" android:background="@drawable/circle_bg" android:backgroundTint="#FFF" android:gravity="center" android:textColor="#333" android:textSize="12sp"/>
             <View android:layout_width="60dp" android:layout_height="2dp" android:background="#333" android:layout_marginHorizontal="5dp" />
-            <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="3" android:background="@drawable/circle_bg" android:backgroundTint="#3E4A52" android:textColor="#FFF" android:gravity="center" android:textSize="12sp"/>
+            <TextView android:layout_width="30dp" android:layout_height="30dp" android:text="3" android:background="@drawable/circle_bg" android:backgroundTint="#3E4A52" android:textColor="#FFF" android:gravity="center" android:textSize="12sp"/>
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="30dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
             android:layout_marginTop="20dp">
 
             <LinearLayout
@@ -74,22 +103,36 @@
                     android:layout_marginTop="10dp"
                     android:textColor="#555"/>
 
-                <ImageView
-                    android:id="@+id/imgPreview"
+                <!-- AQUI ESTÁ A MUDANÇA: FrameLayout para empilhar imagem e loading -->
+                <FrameLayout
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:layout_marginVertical="20dp"
-                    android:src="@android:drawable/ic_menu_gallery"
-                    app:tint="#455A64" />
+                    android:layout_marginVertical="20dp">
+
+                    <ImageView
+                        android:id="@+id/imgPreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@android:drawable/ic_menu_gallery"
+                        android:scaleType="centerCrop"/>
+
+                    <ProgressBar
+                        android:id="@+id/progressBarAnalisando"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:indeterminateTint="#2ECC71"
+                        android:layout_gravity="center"
+                        android:elevation="10dp" />
+                </FrameLayout>
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnAnexar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="20dp"
-                    android:background="@drawable/btn_primary_rounded"
+                    android:paddingHorizontal="30dp"
                     android:backgroundTint="#455A64"
-                    android:text="ANEXAR RECEITA"
+                    android:text="ANEXAR"
                     android:textColor="#FFF"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -101,8 +144,8 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/btn_primary_rounded"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/btn_proximo_state"
         android:text="PRÓXIMA ETAPA →"
         android:textColor="#FFF"
         android:textStyle="bold"

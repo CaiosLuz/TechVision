@@ -2,22 +2,50 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_resumo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D3D3D3">
+    android:background="#F5F5F5">
 
-    <include
-        android:id="@+id/includeTopBar"
-        layout="@layout/top_bar_padrao"
+    <LinearLayout
+        android:id="@+id/topBarResumo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="50dp"
+        android:background="#3E4A52"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TechVision"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="US"
+            android:textColor="#3E4A52"
+            android:textStyle="bold"
+            android:background="@drawable/circle_bg"
+            android:backgroundTint="#D1D1D1"/>
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:fillViewport="true"
-        app:layout_constraintTop_toBottomOf="@id/includeTopBar"
+        app:layout_constraintTop_toBottomOf="@id/topBarResumo"
         app:layout_constraintBottom_toTopOf="@id/btnConcluirCompra">
 
         <LinearLayout
@@ -60,27 +88,35 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:paddingVertical="15dp">
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:paddingVertical="12dp">
 
                         <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="50dp"
-                            android:src="@android:drawable/ic_menu_gallery" /> <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Atitude AT1718M - Preto Fosco"
-                        android:layout_marginStart="15dp"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textColor="#000"/>
+                            android:id="@+id/imgProdutoResumo"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:scaleType="fitCenter"
+                            android:background="#FFF"
+                            android:padding="8dp"/>
+
+                        <TextView
+                            android:id="@+id/txtNomeProdutoResumo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Carregando nome..."
+                            android:layout_marginTop="12dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:gravity="center"/>
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/txtDetalhesSelecao"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Seleções:\n\nTipo: Grau\nEspessura: Fina"
+                        android:text="Tipo: -\nEspessura: -"
                         android:textColor="#333"
                         android:lineSpacingExtra="4dp"
                         android:layout_marginBottom="20dp"/>
@@ -106,7 +142,12 @@
                             android:background="@drawable/table_border"
                             android:paddingHorizontal="12dp"
                             android:paddingVertical="6dp">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="—  01  +" android:textColor="#000" android:textStyle="bold"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="— 01 +"
+                                android:textColor="#000"
+                                android:textStyle="bold"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -116,90 +157,61 @@
                             android:gravity="end"
                             android:orientation="vertical">
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="VALOR" android:textSize="10sp" android:textStyle="bold"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="R$ 321,30" android:textColor="#000" android:textSize="18sp" android:textStyle="bold"/>
+                            <TextView
+                                android:id="@+id/txtValorFinal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="R$ 0,00"
+                                android:textColor="#000"
+                                android:textSize="18sp"
+                                android:textStyle="bold"/>
                         </LinearLayout>
                     </RelativeLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Prescrição Médica:"
+                        android:text="Prescrição Médica Extraída (IA):"
                         android:textStyle="bold"
                         android:textColor="#000"
                         android:layout_marginBottom="12dp"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Longe"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        android:textColor="#000"
-                        android:layout_marginBottom="5dp"/>
 
                     <TableLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:stretchColumns="*"
                         android:layout_marginBottom="15dp">
+
                         <TableRow android:background="#F0F0F0">
                             <TextView android:text="" android:padding="8dp" android:background="@drawable/table_border"/>
                             <TextView android:text="Esférico" android:textStyle="bold" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
                             <TextView android:text="Cilíndrico" android:textStyle="bold" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
                             <TextView android:text="Eixo" android:textStyle="bold" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="DP" android:textStyle="bold" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
                         </TableRow>
+
                         <TableRow>
                             <TextView android:text="OD" android:textStyle="bold" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="- 2.00" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="" android:padding="8dp" android:background="@drawable/table_border"/>
+                            <TextView android:id="@+id/tvEsfOD" android:text="0.00" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
+                            <TextView android:id="@+id/tvCilOD" android:text="0.00" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
+                            <TextView android:id="@+id/tvEixoOD" android:text="0" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
                         </TableRow>
+
                         <TableRow>
                             <TextView android:text="OE" android:textStyle="bold" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="- 2.00" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="" android:padding="8dp" android:background="@drawable/table_border"/>
+                            <TextView android:id="@+id/tvEsfOE" android:text="0.00" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
+                            <TextView android:id="@+id/tvCilOE" android:text="0.00" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
+                            <TextView android:id="@+id/tvEixoOE" android:text="0" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
                         </TableRow>
                     </TableLayout>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Perto"
+                        android:text="* Verifique se os graus acima conferem com sua receita física."
+                        android:textSize="11sp"
+                        android:textColor="#E74C3C"
                         android:gravity="center"
-                        android:textStyle="bold"
-                        android:textColor="#000"
-                        android:layout_marginBottom="5dp"/>
-
-                    <TableLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:stretchColumns="*">
-                        <TableRow android:background="#F0F0F0">
-                            <TextView android:text="" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="Esférico" android:textStyle="bold" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="Cilíndrico" android:textStyle="bold" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="Eixo" android:textStyle="bold" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="DP" android:textStyle="bold" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
-                        </TableRow>
-                        <TableRow>
-                            <TextView android:text="OD" android:textStyle="bold" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="+ 1.00" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="" android:padding="8dp" android:background="@drawable/table_border"/>
-                        </TableRow>
-                        <TableRow>
-                            <TextView android:text="OE" android:textStyle="bold" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="+ 1.00" android:gravity="center" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="" android:padding="8dp" android:background="@drawable/table_border"/>
-                            <TextView android:text="" android:padding="8dp" android:background="@drawable/table_border"/>
-                        </TableRow>
-                    </TableLayout>
+                        android:layout_marginTop="5dp"/>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

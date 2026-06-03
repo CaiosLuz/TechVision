@@ -2,16 +2,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_sucesso"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D3D3D3">
-
-    <include
-        android:id="@+id/includeTopBar"
-        layout="@layout/top_bar_padrao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:background="#F5F5F5"> <include
+    android:id="@+id/includeTopBar"
+    layout="@layout/top_bar_padrao"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,29 +22,27 @@
         app:layout_constraintTop_toBottomOf="@id/includeTopBar">
 
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@android:drawable/checkbox_on_background"
-            android:background="@drawable/circle_bg"
-            android:backgroundTint="#2ECC71"
-            android:padding="20dp"
-            app:tint="#FFFFFF" />
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_sucesso_verde"
+            app:tint="#2ECC71" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="Seu pedido foi realizado com sucesso!"
+            android:text="Pedido realizado!"
             android:textAlignment="center"
             android:textColor="#333"
-            android:textSize="22sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:text="Agradecemos pela compra! Te manteremos informado sobre o status"
+            android:text="Agradecemos pela compra! Te manteremos informado sobre o status."
             android:textAlignment="center"
             android:textColor="#666"
             android:textSize="16sp" />
@@ -55,9 +52,8 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="40dp"
-            android:background="@drawable/table_border"
-            android:drawableStart="@android:drawable/ic_menu_sort_by_size"
-            android:paddingStart="20dp"
+            android:background="@drawable/btn_primary_rounded"
+            android:backgroundTint="#E0E0E0"
             android:text="VOLTAR PARA A HOME"
             android:textColor="#455A64"
             android:textStyle="bold" />
@@ -68,7 +64,7 @@
             android:layout_height="55dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/btn_primary_rounded"
-            android:backgroundTint="#455A64"
+            android:backgroundTint="#304FFE"
             android:text="VISUALIZAR PEDIDO →"
             android:textColor="#FFF"
             android:textStyle="bold" />

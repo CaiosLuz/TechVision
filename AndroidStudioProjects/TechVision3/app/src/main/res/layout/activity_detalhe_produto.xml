@@ -1,143 +1,284 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#F5F5F5">
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/topBar"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="#3E4A52"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingHorizontal="16dp"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <EditText
-            android:id="@+id/etPesquisarDetalhe"
-            android:layout_width="0dp"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:hint="Pesquisar"
-            android:background="@drawable/circle_bg"
-            android:backgroundTint="@color/white"
-            android:paddingStart="15dp"
-            android:drawableEnd="@android:drawable/ic_menu_search"
-            android:paddingEnd="15dp"
-            android:textColor="#000"/>
-
-        <TextView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:text="US"
-            android:textColor="#3E4A52"
-            android:textStyle="bold"
-            android:background="@drawable/circle_bg"
-            android:backgroundTint="#D1D1D1"
-            android:layout_marginStart="12dp"/>
-    </LinearLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/topBar"
-        app:layout_constraintBottom_toTopOf="@id/bottomMenuNav">
+        android:layout_height="match_parent"
+        android:background="#F5F5F5">
 
         <LinearLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#3E4A52"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/etPesquisarDetalhe"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:hint="Pesquisar"
+                android:background="@drawable/circle_bg"
+                android:backgroundTint="@color/white"
+                android:paddingStart="15dp"
+                android:drawableEnd="@android:drawable/ic_menu_search"
+                android:paddingEnd="15dp"
+                android:focusable="false"
+                android:clickable="true"
+                android:textColor="#000"/>
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="US"
+                android:textColor="#3E4A52"
+                android:textStyle="bold"
+                android:background="@drawable/circle_bg"
+                android:backgroundTint="#D1D1D1"
+                android:layout_marginStart="12dp"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/topBar"
+            app:layout_constraintBottom_toTopOf="@id/bottomMenu">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="24dp">
+
+                <ImageView
+                    android:id="@+id/imgProduto"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="#FFF"
+                    android:padding="8dp"/>
+
+                <TextView
+                    android:id="@+id/txtNomeProduto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carregando nome..."
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#333"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:id="@+id/txtPrecoProduto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$ 0,00"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:id="@+id/txtAvaliacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⭐⭐⭐⭐⭐ 4.7"
+                    android:textColor="#FF9800"
+                    android:textSize="14sp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnComprar"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:backgroundTint="#4CAF50"
+                    android:text="COMPRAR AGORA"
+                    android:textColor="#FFF"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnAdicionarCarrinho"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#3E4A52"
+                    android:text="ADICIONAR AO CARRINHO"
+                    android:textColor="#FFF"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Descrição do Produto"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#333"
+                    android:layout_marginHorizontal="16dp"/>
+
+                <TextView
+                    android:id="@+id/txtDescricaoProduto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Carregando especificações e detalhes técnicos da armação e lente..."
+                    android:textSize="14sp"
+                    android:textColor="#666"
+                    android:lineSpacingMultiplier="1.2"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="Especificações Técnicas"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/table_border_bg"
+                    android:stretchColumns="1">
+
+                    <TableRow
+                        android:background="#FFFFFF"
+                        android:padding="14dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Material da Armação"
+                            android:textColor="#666666"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:id="@+id/txtTechMaterial"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="Acetato Premium"
+                            android:textColor="#333333"
+                            android:textSize="14sp"/>
+                    </TableRow>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0"/>
+
+                    <TableRow
+                        android:background="#F9F9F9"
+                        android:padding="14dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Formato"
+                            android:textColor="#666666"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:id="@+id/txtTechFormato"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="Retangular / Casual"
+                            android:textColor="#333333"
+                            android:textSize="14sp"/>
+                    </TableRow>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0"/>
+
+                    <TableRow
+                        android:background="#FFFFFF"
+                        android:padding="14dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gênero"
+                            android:textColor="#666666"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:id="@+id/txtTechGenero"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="Unissex"
+                            android:textColor="#333333"
+                            android:textSize="14sp"/>
+                    </TableRow>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0"/>
+
+                    <TableRow
+                        android:background="#F9F9F9"
+                        android:padding="14dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tipo de Aro"
+                            android:textColor="#666666"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:id="@+id/txtTechAro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="Fechado"
+                            android:textColor="#333333"
+                            android:textSize="14sp"/>
+                    </TableRow>
+                </TableLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <include
+            android:id="@+id/bottomMenu"
+            layout="@layout/bottom_menu_padrao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="20dp">
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-            <ImageView
-                android:id="@+id/imgProduto"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:src="@drawable/oculos1"
-                android:scaleType="centerInside"
-                android:background="#FFF"
-                android:padding="20dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:id="@+id/txtNomeProduto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Carregando nome..."
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:textColor="#333"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"/>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu" />
 
-            <TextView
-                android:id="@+id/txtPrecoProduto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="R$ 0,00"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textColor="#000"
-                android:layout_marginHorizontal="16dp"/>
-
-            <TextView
-                android:id="@+id/txtParcelas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Em até 7x s/ juros"
-                android:textSize="14sp"
-                android:textColor="#666"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginBottom="8dp"/>
-
-            <TextView
-                android:id="@+id/txtAvaliacao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="⭐⭐⭐⭐⭐ 4.7"
-                android:textColor="#FF9800"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginBottom="24dp"/>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnCarrinho"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_marginHorizontal="16dp"
-                android:background="#3E4A52"
-                android:text="ADICIONAR AO CARRINHO"
-                android:textColor="#FFF"
-                android:textStyle="bold"
-                android:drawableEnd="@drawable/ic_cart"
-                android:paddingEnd="20dp"
-                android:layout_marginBottom="10dp"/>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnComprar"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_marginHorizontal="16dp"
-                android:background="#4CAF50"
-                android:text="COMPRAR AGORA"
-                android:textColor="#FFF"
-                android:textStyle="bold"/>
-
-        </LinearLayout>
-    </ScrollView>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomMenuNav"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:background="#3E4A52"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_nav_menu"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

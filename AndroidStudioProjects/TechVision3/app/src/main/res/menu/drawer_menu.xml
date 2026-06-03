@@ -2,18 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_compras_drawer"
+            android:icon="@drawable/ic_compras"
+            android:title="Minhas Compras" />
+
+        <item
+            android:id="@+id/nav_favoritos_drawer"
+            android:icon="@drawable/ic_favoritos"
+            android:title="Favoritos" />
+
         <item
             android:id="@+id/nav_login_drawer"
-            android:icon="@android:drawable/ic_menu_info_details"
-            android:title="Entrar / Login" />
-
-        <item
-            android:id="@+id/nav_compras"
-            android:title="Minhas compras" />
-
-        <item
-            android:id="@+id/nav_favoritos"
-            android:title="Favoritos" />
+            android:icon="@android:drawable/ic_lock_lock"
+            android:title="Login / Sair" />
     </group>
 
 </menu>

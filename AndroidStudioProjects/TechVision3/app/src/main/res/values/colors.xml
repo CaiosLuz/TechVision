@@ -6,4 +6,5 @@
     <color name="white">#FFFFFF</color>
     <color name="text_gray">#555555</color>
     <color name="discount_tag">#2C3E50</color>
+    <color name="button_etapa">#304FFE</color>
 </resources>

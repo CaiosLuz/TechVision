@@ -17,19 +17,22 @@
         android:id="@+id/logo"
         android:layout_width="253dp"
         android:layout_height="256dp"
+        android:layout_marginTop="50dp"
         android:src="@drawable/logo__1_"
-        tools:layout_editor_absoluteX="79dp"
-        tools:layout_editor_absoluteY="75dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginHorizontal="40dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/input_dark"
         android:hint="Usuário"
         android:inputType="text"
+        android:paddingStart="16dp"
         android:textColor="#FFFFFF"
         android:textColorHint="#CCCCCC"
         app:layout_constraintEnd_toEndOf="parent"
