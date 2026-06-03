@@ -165,6 +165,26 @@
                                 android:textColor="#000"
                                 android:textSize="18sp"
                                 android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="LINK DE PAGAMENTO"
+                                android:textStyle="bold"
+                                android:textSize="12sp"
+                                android:layout_marginTop="15dp"
+                                android:textColor="#333"/>
+
+                            <TextView
+                                android:id="@+id/txtCheckoutUrl"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gerando link..."
+                                android:textColor="#1E88E5"
+                                android:padding="8dp"
+                                android:background="#EEF5FF"
+                                android:ellipsize="none"
+                                android:maxLines="10"/>
                         </LinearLayout>
                     </RelativeLayout>
 

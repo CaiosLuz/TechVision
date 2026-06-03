@@ -114,20 +114,41 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
+                android:clickable="true"
+                android:focusable="true"
+
                 app:cardCornerRadius="20dp"
                 app:cardElevation="2dp"
+
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardForegroundColor="@android:color/transparent"
+
                 app:strokeColor="#304FFE"
-                app:strokeWidth="0dp"
-                android:clickable="true"
-                android:focusable="true">
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="20dp" android:gravity="center_vertical">
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:gravity="center_vertical">
+
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/lente_normal" />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Normal" android:layout_marginStart="15dp" android:textStyle="bold" android:textColor="#333" android:textSize="18sp"/>
+                        android:src="@drawable/lente_normal"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Normal"
+                        android:layout_marginStart="15dp"
+                        android:textStyle="bold"
+                        android:textColor="#333"
+                        android:textSize="18sp"/>
+
                 </LinearLayout>
+
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
@@ -135,20 +156,39 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
+                android:clickable="true"
+                android:focusable="true"
+
                 app:cardCornerRadius="20dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardForegroundColor="@android:color/transparent"
                 app:strokeColor="#304FFE"
-                app:strokeWidth="0dp"
-                android:clickable="true"
-                android:focusable="true">
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="20dp" android:gravity="center_vertical">
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:gravity="center_vertical">
+
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/lente_fina" />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fina" android:layout_marginStart="15dp" android:textStyle="bold" android:textColor="#333" android:textSize="18sp"/>
+                        android:src="@drawable/lente_fina"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fina"
+                        android:layout_marginStart="15dp"
+                        android:textStyle="bold"
+                        android:textColor="#333"
+                        android:textSize="18sp"/>
+
                 </LinearLayout>
+
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
@@ -156,20 +196,39 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
+                android:clickable="true"
+                android:focusable="true"
+
                 app:cardCornerRadius="20dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardForegroundColor="@android:color/transparent"
                 app:strokeColor="#304FFE"
-                app:strokeWidth="0dp"
-                android:clickable="true"
-                android:focusable="true">
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="20dp" android:gravity="center_vertical">
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:gravity="center_vertical">
+
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/lente_super_fina" />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Super Fina" android:layout_marginStart="15dp" android:textStyle="bold" android:textColor="#333" android:textSize="18sp"/>
+                        android:src="@drawable/lente_super_fina"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Super Fina"
+                        android:layout_marginStart="15dp"
+                        android:textStyle="bold"
+                        android:textColor="#333"
+                        android:textSize="18sp"/>
+
                 </LinearLayout>
+
             </com.google.android.material.card.MaterialCardView>
 
             <androidx.appcompat.widget.AppCompatButton

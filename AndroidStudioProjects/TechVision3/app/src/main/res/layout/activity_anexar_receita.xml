@@ -126,6 +126,16 @@
                         android:elevation="10dp" />
                 </FrameLayout>
 
+                <TextView
+                    android:id="@+id/txtStatusOCR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nenhuma receita enviada"
+                    android:textColor="#666"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp"/>
+
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnAnexar"
                     android:layout_width="wrap_content"
